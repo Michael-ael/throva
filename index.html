@@ -1,0 +1,2543 @@
+<!doctype html>
+<html lang="en-US" class="no-js" data-region="FC" data-country="NG">
+
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        var gform;
+        gform || (document.addEventListener("gform_main_scripts_loaded", function () {
+            gform.scriptsLoaded = !0
+        }), document.addEventListener("gform/theme/scripts_loaded", function () {
+            gform.themeScriptsLoaded = !0
+        }), window.addEventListener("DOMContentLoaded", function () {
+            gform.domLoaded = !0
+        }), gform = {
+            domLoaded: !1,
+            scriptsLoaded: !1,
+            themeScriptsLoaded: !1,
+            isFormEditor: () => "function" == typeof InitializeEditor,
+            callIfLoaded: function (o) {
+                return !(!gform.domLoaded || !gform.scriptsLoaded || !gform.themeScriptsLoaded && !gform
+                    .isFormEditor() || (gform.isFormEditor() && console.warn(
+                        "The use of gform.initializeOnLoaded() is deprecated in the form editor context and will be removed in Gravity Forms 3.1."
+                        ), o(), 0))
+            },
+            initializeOnLoaded: function (o) {
+                gform.callIfLoaded(o) || (document.addEventListener("gform_main_scripts_loaded", () => {
+                    gform.scriptsLoaded = !0, gform.callIfLoaded(o)
+                }), document.addEventListener("gform/theme/scripts_loaded", () => {
+                    gform.themeScriptsLoaded = !0, gform.callIfLoaded(o)
+                }), window.addEventListener("DOMContentLoaded", () => {
+                    gform.domLoaded = !0, gform.callIfLoaded(o)
+                }))
+            },
+            hooks: {
+                action: {},
+                filter: {}
+            },
+            addAction: function (o, r, e, t) {
+                gform.addHook("action", o, r, e, t)
+            },
+            addFilter: function (o, r, e, t) {
+                gform.addHook("filter", o, r, e, t)
+            },
+            doAction: function (o) {
+                gform.doHook("action", o, arguments)
+            },
+            applyFilters: function (o) {
+                return gform.doHook("filter", o, arguments)
+            },
+            removeAction: function (o, r) {
+                gform.removeHook("action", o, r)
+            },
+            removeFilter: function (o, r, e) {
+                gform.removeHook("filter", o, r, e)
+            },
+            addHook: function (o, r, e, t, n) {
+                null == gform.hooks[o][r] && (gform.hooks[o][r] = []);
+                var d = gform.hooks[o][r];
+                null == n && (n = r + "_" + d.length), gform.hooks[o][r].push({
+                    tag: n,
+                    callable: e,
+                    priority: t = null == t ? 10 : t
+                })
+            },
+            doHook: function (r, o, e) {
+                var t;
+                if (e = Array.prototype.slice.call(e, 1), null != gform.hooks[r][o] && ((o = gform.hooks[r][
+                        o
+                    ]).sort(function (o, r) {
+                        return o.priority - r.priority
+                    }), o.forEach(function (o) {
+                        "function" != typeof (t = o.callable) && (t = window[t]), "action" == r ? t
+                            .apply(null, e) : e[0] = t.apply(null, e)
+                    })), "filter" == r) return e[0]
+            },
+            removeHook: function (o, r, t, n) {
+                var e;
+                null != gform.hooks[o][r] && (e = (e = gform.hooks[o][r]).filter(function (o, r, e) {
+                    return !!(null != n && n != o.tag || null != t && t != o.priority)
+                }), gform.hooks[o][r] = e)
+            }
+        });
+        /* ]]> */
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+
+    <!-- DNS prefetch for video domain -->
+    <link rel="dns-prefetch" href="index.html">
+
+    <!-- Preconnect for faster video loading -->
+    <link rel="preconnect" href="index.html">
+
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+    <style>
+        img:is([sizes="auto"i], [sizes^="auto,"i]) {
+            contain-intrinsic-size: 3000px 1500px
+        }
+    </style>
+
+    <title>Stocks, Bonds, Crypto, &amp; Options Investing App - Public.com</title>
+    <meta name="description"
+        content="Invest in Stocks, Bonds, Options, Crypto, ETFs, Treasuries, and more with AI-powered fundamental data and custom analysis." />
+    <link rel="canonical" href="index.html" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Stocks, Bonds, Crypto, &amp; Options Investing App - Public.com" />
+    <meta property="og:description"
+        content="Invest in Stocks, Bonds, Options, Crypto, ETFs, Treasuries, and more with AI-powered fundamental data and custom analysis." />
+    <meta property="og:url" content="https://public.com" />
+    <meta property="og:site_name" content="Public" />
+    <meta property="article:publisher" content="https://www.facebook.com/PublicHello/" />
+    <meta property="article:modified_time" content="2025-07-17T08:31:51+00:00" />
+    <meta property="og:image" content="https://public.com/wp-content/uploads/2023/10/OG-Image-Homepage.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@public" />
+    <meta name="msvalidate.01" content="A6156CD044A875D000DCC5FCE7CC111E" />
+    <meta name="google-site-verification" content="sSeFHLieQ9k0kB7R5EqzQ7hrHuygGrmpQag7vtWAOrE" />
+
+
+    <link rel='dns-prefetch' href='https://universal.hellopublic.com' />
+    <!-- Google Tag Manager -->
+    <script type="text/javascript">
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PCBFC3K');
+    </script>
+    <!-- End Google Tag Manager -->
+    <style id='classic-theme-styles-inline-css' type='text/css'>
+        /*! This file is auto-generated */
+        .wp-block-button__link {
+            color: #fff;
+            background-color: #32373c;
+            border-radius: 9999px;
+            box-shadow: none;
+            text-decoration: none;
+            padding: calc(.667em + 2px) calc(1.333em + 2px);
+            font-size: 1.125em
+        }
+
+        .wp-block-file__button {
+            background: #32373c;
+            color: #fff;
+            text-decoration: none
+        }
+    </style>
+    <link rel='stylesheet' id='Stock Charts by Public.com/css-css' defer
+        href='wp-content/plugins/stock-charts-by-public-com/dist/styles/main-b015f46f%EF%B9%96ver=1.0.1.css'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='cs/css-css' href='wp-content/themes/public/dist/styles/homepage-607b0fac.css'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='cs/cssa-defer-css' defer
+        href='wp-content/themes/public/dist/styles/homepage-async-b30feb97.css' type='text/css' media='print' />
+    <noscript>
+        <link rel='stylesheet' id='cs/cssa-defer-css'
+            href='wp-content/themes/public/dist/styles/homepage-async-b30feb97.css' type='text/css' media='all' />
+    </noscript>
+    <link rel='stylesheet' id='cs/common-css-css' href='wp-content/themes/public/dist/styles/common-ba2d07b0.css'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='cs/common-css-defer-css' defer
+        href='wp-content/themes/public/dist/styles/common-async-897e264b.css' type='text/css' media='print' />
+    <noscript>
+        <link rel='stylesheet' id='cs/common-css-defer-css'
+            href='wp-content/themes/public/dist/styles/common-async-897e264b.css' type='text/css' media='all' />
+    </noscript>
+    <script data-categories="essential" type="text/javascript" defer
+        src="wp-content/plugins/stock-charts-by-public-com/dist/scripts/main-b015f46f%EF%B9%96ver=1.0.1.js"
+        id="Stock Charts by Public.com/js-js"></script>
+    <script data-categories="essential" type="text/javascript" defer
+        src="wp-content/themes/public/dist/scripts/homepage-async-b30feb97%EF%B9%96ver=1.js" id="cs/jsa-defer-js">
+    </script>
+    <script type="text/javascript" id="cs/common-js-js-extra">
+        /* <![CDATA[ */
+        var HP = {
+            "page_id": "17662",
+            "nonce": "cc80ba1a74",
+            "env": "production",
+            "app_adjust": [{
+                "referrer": "https:\/\/www.google.com\/",
+                "link": "https:\/\/app.adjust.com\/hxp5nl6"
+            }, {
+                "referrer": "https:\/\/search.yahoo.com\/",
+                "link": "https:\/\/app.adjust.com\/hxp5nl6"
+            }, {
+                "referrer": "https:\/\/duckduckgo.com\/",
+                "link": "https:\/\/app.adjust.com\/hxp5nl6"
+            }, {
+                "referrer": "https:\/\/www.baidu.com\/",
+                "link": "https:\/\/app.adjust.com\/hxp5nl6"
+            }, {
+                "referrer": "https:\/\/www.ecosia.org\/",
+                "link": "https:\/\/app.adjust.com\/hxp5nl6"
+            }, {
+                "referrer": "https:\/\/www.money.com\/",
+                "link": "https:\/\/www.pqr3ntrk.com\/4RQSJ\/293Z4R"
+            }, {
+                "referrer": "https:\/\/www.bing.com\/",
+                "link": "https:\/\/app.adjust.com\/hxp5nl6"
+            }, {
+                "referrer": "https:\/\/decrypt.co\/",
+                "link": "https:\/\/app.adjust.com\/u9erlzu"
+            }, {
+                "referrer": "https:\/\/financebuzz.com\/",
+                "link": "https:\/\/app.adjust.com\/7q9b4ps"
+            }, {
+                "referrer": "https:\/\/www.bankrate.com\/",
+                "link": "https:\/\/public.qwjcdi.net\/c\/353874\/698556\/10608"
+            }],
+            "paths": {
+                "root": "\/wp-content\/themes\/public",
+                "assets": "\/wp-content\/themes\/public\/dist",
+                "ajax_url": "https:\/\/public.com\/wp-admin\/admin-ajax.php"
+            }
+        };
+        /* ]]> */
+    </script>
+    <script data-categories="essential" type="text/javascript"
+        src="wp-content/themes/public/dist/scripts/common-ba2d07b0%EF%B9%96ver=1.js" id="cs/common-js-js"></script>
+    <script data-categories="essential" type="text/javascript" defer
+        src="wp-content/themes/public/dist/scripts/common-async-897e264b%EF%B9%96ver=1.js" id="cs/common-js-defer-js">
+    </script>
+    <script data-categories="essential" type="text/javascript"
+        src="https://universal.hellopublic.com/prod-web/adjust-link.js" id="cs/js/tracker-update-js"></script>
+    <script type="text/javascript">
+        document.documentElement.className += " js";
+    </script>
+    <link rel="shortcut icon" href="wp-content/uploads/2022/02/logo.ico"
+        data-dark="/wp-content/uploads/2022/02/public-favicon-white.png" type="image/x-icon" />
+    <script data-categories="advertising" src="https://web-sdk-cdn.singular.net/singular-sdk/latest/singular-sdk.js">
+    </script>
+    <link rel="preload" href="wp-content/uploads/2025/06/home-bg-hero-v2-xl.mp4" as="video" type="video/mp4">
+    <link rel="preload" href="wp-content/uploads/2025/06/home-bg-hero-v2-xl-1024x576.png" as="image" type="image/webp">
+    <script type="text/javascript">
+        var hp_singular_base_link =
+            "https://public.sng.link/Ag0a8/f14v?_ios_dl=matador%3A%2F%2F&_android_dl=public%3A%2F%2F&_smtype=3";
+        var hp_singular_product_id = "com.public";
+    </script>
+
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Public",
+            "alternateName": "Public Investing App",
+            "url": "https://public.com",
+            "logo": "https://public.com/wp-content/uploads/2025/07/public-logo.png",
+            "sameAs": [
+                "https://www.facebook.com/publichello",
+                "https://x.com/public",
+                "https://www.linkedin.com/company/publichello/",
+                "https://medium.com/the-public-blog/",
+                "https://www.tiktok.com/@public",
+                "https://www.instagram.com/publicapp/"
+            ]
+        }
+    </script>
+</head>
+
+<body class="home wp-singular template-homepage page wp-theme-public skip-referrer-update">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PCBFC3K" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+    <div id="page-wrap" class="wrap">
+
+
+        <header class="site-header">
+
+            <div class="container wide">
+                <div class="site-logo">
+                <a href="index.html" class="website-logo style-default">
+                    <img src="logo_throva.png" width="87px" style="transform: scale(2);" alt="">
+                </a> </div>
+
+
+
+                <button type="button" data-toggle="class" data-target="navbar-main-menu" class="button-menu-toggle">
+                    <span></span>
+                </button>
+
+                <nav id="navbar-main-menu" class="navbar-main-menu">
+                    <div class="span-menu">
+                        <ul class="menu-main">
+                            <li class="menu-item menu-item-invest menu-item-has-children">
+                                <a href="#sub-menu-invest" data-toggle="class" data-target="sub-menu-invest">Invest</a>
+
+                                <ul id="sub-menu-invest" class="sub-menu-grid">
+                                    <li class="has-menu">
+                                        <span class="menu-label hide-mobile"> &nbsp; </span>
+                                        <ul class="sub-menu">
+
+                                            <li class="menu-item">
+                                                <a href="invest/stocks.html">
+                                                    <span class="menu-title">Stocks</span>
+                                                </a>
+                                            </li>
+
+                                            <li class="menu-item">
+                                                <a href="invest/options.html">
+                                                    <span class="menu-title">
+                                                        Options
+                                                    </span>
+                                                </a>
+                                            </li>
+
+                                            <li class="menu-item">
+                                                <a href="invest/margin.html">
+                                                    <span class="menu-title">
+                                                        Margin
+                                                    </span>
+                                                </a>
+                                            </li>
+
+                                            <li class="menu-item">
+                                                <a href="invest/bonds.html">
+                                                    <span class="menu-title">
+                                                        Bonds
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="has-menu">
+                                        <ul class="sub-menu">
+
+                                            <li class="menu-item">
+                                                <a href="bond-account.html">
+                                                    <span class="menu-title">
+                                                        Bond Account
+                                                        <span class="menu-item-label label-bond-account">
+                                                            5.9% yield
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </li>
+
+                                            <li class="menu-item">
+                                                <a href="high-yield-cash-account.html">
+                                                    <span class="menu-title">
+                                                        High-Yield Cash Account
+                                                        <span class="menu-item-label label-hyca">
+                                                            4.1% APY
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </li>
+
+                                            <li class="menu-item">
+                                                <a href="invest/treasuries.html">
+                                                    <span class="menu-title">
+                                                        Treasuries
+                                                    </span>
+                                                </a>
+                                            </li>
+
+                                            <li class="menu-item">
+                                                <a href="ira.html">
+                                                    <span class="menu-title">
+                                                        Retirement (IRAs)
+
+                                                        <span class="menu-item-label">
+                                                            1% MATCH
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="has-menu">
+                                        <ul class="sub-menu">
+                                            <li class="menu-item">
+                                                <a href="invest/investment-plans.html">
+                                                    <span class="menu-title">
+                                                        Investment Plans
+                                                    </span>
+                                                </a>
+                                            </li>
+
+                                            <li class="menu-item">
+                                                <a href="invest/crypto.html">
+                                                    <span class="menu-title">
+                                                        Crypto
+                                                        <span class="menu-item-label label-crypto">Offered by Bakkt
+                                                            Crypto</span>
+                                                    </span>
+                                                </a>
+                                            </li>
+
+                                            <li class="menu-item">
+                                                <a href="invest/etfs.html">
+                                                    <span class="menu-title">ETFs</span>
+                                                </a>
+                                            </li>
+
+                                            <li class="menu-item">
+                                                <a href="api.html">
+                                                    <span class="menu-title">
+                                                        Active Trading API
+
+                                                        <span class="menu-item-label label-new">
+                                                            New
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="has-card">
+
+                                        <div class="card">
+                                            <div class="span-label">
+                                                <span class="menu-label">
+                                                    Transfer your IRA today
+                                                </span>
+                                            </div>
+
+                                            <div class="span-thumb">
+                                                <img width="302" height="130" class="thumb"
+                                                    alt="Limited time: Earn 1% on annual contributions" loading="lazy"
+                                                    src="wp-content/themes/public/dist/images/nav/thumb-ira.png"> </div>
+
+                                            <div class="span-excerpt">
+                                                <a href="ira.html">
+                                                    <p class="h3">1% IRA match</p>
+                                                    <p class="excerpt">Limited time: Earn 1% on annual contributions,
+                                                        IRA transfers, and 401(k) rollovers. <span
+                                                            class="link-plain">Learn more</span></p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-resources menu-item-has-children">
+                                <a href="#sub-menu-resources" data-toggle="class"
+                                    data-target="sub-menu-resources">Resources</a>
+
+                                <ul id="sub-menu-resources" class="sub-menu-grid">
+                                    <li class="has-menu">
+                                        <ul class="sub-menu">
+                                            <li class="menu-item">
+                                                <a href="invest/options.html">
+                                                    <span class="menu-title">Options Rebate FAQ</span>
+                                                    <span class="menu-description">
+                                                        See how the Options Trading Rebate Program works
+                                                    </span>
+                                                </a>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+
+                                    <li class="has-menu">
+                                        <ul class="sub-menu">
+                                            <li class="menu-item">
+                                                <a href="transfer-account.html">
+                                                    <span class="menu-title">
+                                                        Transfer Your Account
+                                                    </span>
+                                                    <span class="menu-description">
+                                                        Get up to $10,000 when you transfer your investment portfolio to
+                                                        Public.
+                                                    </span>
+                                                </a>
+                                            </li>
+
+                                            <li class="menu-item">
+                                                <a href="bonds/screener.html">
+                                                    <span class="menu-title">Bond Screener</span>
+                                                    <span class="menu-description">
+                                                        Explore over 10,000 bonds with our advanced screening tool.
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="has-menu">
+                                        <ul class="sub-menu">
+                                            <li class="menu-item">
+                                                <a href="tools/high-yield-savings-calculator.html">
+                                                    <span class="menu-title">High Yield Savings Calculator</span>
+                                                    <span class="menu-description">
+                                                        Compare our competitive rates and plan your financial growth.
+                                                    </span>
+                                                </a>
+                                            </li>
+
+
+                                            <li class="menu-item">
+                                                <a href="learn.html">
+                                                    <span class="menu-title">
+                                                        Learn </span>
+                                                    <span class="menu-description">
+                                                        Browse our latest articles and investing resources. </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="has-card">
+
+                                        <div class="card card-bond-account">
+                                            <div class="span-label">
+                                                <span class="menu-label">
+                                                    Start investing today </span>
+                                            </div>
+
+                                            <div class="span-thumb">
+                                                <img src="wp-content/themes/public/dist/images/nav/thumb-nav-bond-account-decimal.png"
+                                                    width="302" height="130" alt="Bond Account" /><span
+                                                    class="rate">5.9</span> </div>
+
+                                            <div class="span-excerpt">
+                                                <a href="bond-account.html">
+                                                    <p class="h3">Bond Account</p>
+                                                    <p class="excerpt">Discover a new way to invest in bonds and earn
+                                                        interest payments. <span class="link-plain">Learn more</span>
+                                                    </p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-company menu-item-has-children">
+                                <a href="#sub-menu-company" data-toggle="class"
+                                    data-target="sub-menu-company">Company</a>
+
+
+                                <ul id="sub-menu-company" class="sub-menu-grid">
+                                    <li class="has-menu">
+                                        <ul class="sub-menu">
+                                            <li class="menu-item">
+                                                <a href="about-us.html">
+                                                    <span class="menu-title">About</span>
+                                                    <span class="menu-description">
+                                                        Discover how we're making the markets work for all investors.
+                                                    </span>
+                                                </a>
+                                            </li>
+
+                                            <li class="menu-item">
+                                                <a href="newsroom.html">
+                                                    <span class="menu-title">Newsroom</span>
+                                                    <span class="menu-description">
+                                                        Access our media kit and a collection of our latest news.
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="has-menu">
+                                        <ul class="sub-menu">
+                                            <li class="menu-item">
+                                                <a href="mailto:support@public.com">
+                                                    <span class="menu-title">Have questions?</span>
+                                                    <span class="menu-description">
+                                                        Reach out to us at support@public.com &mdash; we're here to
+                                                        help.
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a href="media.html">
+                                                    <span class="menu-title">Media</span>
+                                                    <span class="menu-description">
+                                                        Market news, live commentary, and analysis from industry
+                                                        experts.
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="has-menu"></li>
+
+                                    <li class="has-card">
+
+                                        <div class="card card-bond-account">
+                                            <div class="span-label">
+                                                <span class="menu-label">
+                                                    Start investing today </span>
+                                            </div>
+
+                                            <div class="span-thumb">
+                                                <img src="wp-content/themes/public/dist/images/nav/thumb-nav-bond-account-decimal.png"
+                                                    width="302" height="130" alt="Bond Account" /><span
+                                                    class="rate">5.9</span> </div>
+
+                                            <div class="span-excerpt">
+                                                <a href="bond-account.html">
+                                                    <p class="h3">Bond Account</p>
+                                                    <p class="excerpt">Discover a new way to invest in bonds and earn
+                                                        interest payments. <span class="link-plain">Learn more</span>
+                                                    </p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                         
+                            <li class="menu-item-button button-sign-in">
+                                <a href="login.html" aria-label="Visit Sign In page">Sign In</a>
+                            </li>
+                            <li class="menu-item-button button-get-started">
+                                <a href="https://public.sng.link/Ag0a8/f14v?_ios_dl=matador%3A%2F%2F&amp;_android_dl=public%3A%2F%2F&amp;_smtype=3"
+                                    aria-label="Download Public.com app" class="yay-link">Get Started</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="span-webapp-buttons">
+                        <ul class="menu-mobile-buttons menu-main">
+                            <li class="menu-item-button button-sign-in">
+                                <a href="login.html" aria-label="Visit Sign In page">Sign In</a>
+                            </li>
+                            <li class="menu-item-button button-get-started">
+                                <a href="https://public.sng.link/Ag0a8/f14v?_ios_dl=matador%3A%2F%2F&amp;_android_dl=public%3A%2F%2F&amp;_smtype=3"
+                                    aria-label="Visit Sign In page" class="yay-link">Get Started</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="span-appstore-buttons">
+                        <span class="appstore-links style-white"><a
+                                href="https://public.sng.link/Ag0a8/f14v?_ios_dl=matador%3A%2F%2F&amp;_android_dl=public%3A%2F%2F&amp;_smtype=3"
+                                class="store-apple yay-link" aria-label="Download the app from apple store"
+                                rel="nofollow noopener noreferrer"><img
+                                    src="https://hellopublic.wpengine.com/wp-content/themes/public/templates/shared/static-components/appstore-links/assets/white/apple-badge.svg"
+                                    alt="download public app on apple store" width="165" height="56" /></a><a
+                                href="https://public.sng.link/Ag0a8/f14v?_ios_dl=matador%3A%2F%2F&amp;_android_dl=public%3A%2F%2F&amp;_smtype=3"
+                                class="store-google yay-link" aria-label="Download the app from google store"
+                                rel="nofollow noopener noreferrer"><img
+                                    src="https://hellopublic.wpengine.com/wp-content/themes/public/templates/shared/static-components/appstore-links/assets/white/google-badge.svg"
+                                    alt="download public app on google store" width="165" height="56" /></a></span>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main class="main">
+            <section class="section homepage-hero">
+                <div class="container">
+
+                    <div class="span-content">
+                        <h3 class="title" style="font-size: 70px;">Anchoring Capital in the World's Most Enduring Wealth Sectors
+</h3>
+                        <div class="highlights-container">
+                            <ul>
+                                <li>
+                                    <span class="icon"><img width="1" height="1"
+                                            src="wp-content/uploads/2024/11/pie-chart-blue.svg"
+                                            class="attachment-thumbnail size-thumbnail" alt="Pie Chart Blue"
+                                            decoding="async" /></span>
+                                    <p>Multi-asset investing</p>
+                                </li>
+                                <li>
+                                    <span class="icon"><img width="1" height="1"
+                                            src="wp-content/uploads/2024/11/arrows-up-blue.svg"
+                                            class="attachment-thumbnail size-thumbnail" alt="Arrows Up Blue"
+                                            decoding="async" /></span>
+                                    <p>Industry-leading yields</p>
+                                </li>
+                                <li>
+                                    <span class="icon"><img width="1" height="1"
+                                            src="wp-content/uploads/2024/11/heart-blue.svg"
+                                            class="attachment-thumbnail size-thumbnail" alt="Heart Blue"
+                                            decoding="async" /></span>
+                                    <p>Trusted by millions</p>
+                                </li>
+                            </ul>
+                            <a href="https://public.sng.link/Ag0a8/f14v?_ios_dl=matador%3A%2F%2F&amp;_android_dl=public%3A%2F%2F&amp;_smtype=3"
+                                class="cta btn-blue-gradient"><span>Get Started</span></a>
+                        </div>
+                    </div>
+
+
+                    <div class="span-media" data-fallback-image="">
+
+                        <video class="bg-video bg-video--sm" autoplay muted loop playsinline preload="auto"
+                            poster="wp-content/uploads/2025/06/home-bg-hero-v2-sm.png"
+                            aria-label="Background video showcasing our platform">
+                            <source src="wp-content/uploads/2025/06/home-bg-hero-v2-sm.mp4" type="video/mp4">
+                        </video>
+                        <video class="bg-video bg-video--md" autoplay muted loop playsinline preload="auto"
+                            poster="wp-content/uploads/2025/06/home-bg-hero-v2-md.png"
+                            aria-label="Background video showcasing our platform">
+                            <source src="wp-content/uploads/2025/06/home-bg-hero-v2-md.mp4" type="video/mp4">
+                        </video>
+                        <video class="bg-video bg-video--lg" autoplay muted loop playsinline preload="auto"
+                            poster="wp-content/uploads/2025/06/home-bg-hero-v2-lg-1024x576.png"
+                            aria-label="Background video showcasing our platform">
+                            <source src="wp-content/uploads/2025/06/home-bg-hero-v2-lg.mp4" type="video/mp4">
+                        </video>
+                        <video class="bg-video bg-video--xl" autoplay muted loop playsinline preload="auto"
+                            poster="wp-content/uploads/2025/06/home-bg-hero-v2-xl-1024x576.png"
+                            aria-label="Background video showcasing our platform">
+                            <source src="wp-content/uploads/2025/06/home-bg-hero-v2-xl.mp4" type="video/mp4">
+                        </video> </div>
+
+                </div>
+            </section>
+            <section class="section section-reviews">
+                <div class="container">
+                    
+                    <div class="span-title">
+                        <h3>“THE MARKET IS BROKEN. HERE'S WHY WE ARE NOT”</h3>
+                    </div>
+                 
+                </div>
+            </section>
+            <section class="section section-highlights">
+                <div class="container">
+                    <div class="title-container">
+                        <span class=span-label>Explore our assets</span>
+                        <h1 class="span-title">
+                            <div class="title ">
+                                <a href="invest/stocks.html" class=" title-link"><span>Gold</span></a> </div>
+                            <span class="slash ">/</span>
+                            <div class="title ">
+                                <a href="invest/bonds.html" class=" title-link"><span>Oil & Gas</span></a> </div>
+                            <span class="slash ">/</span>
+                            <div class="title ">
+                                <a href="invest/treasuries.html" class=" title-link"><span>AI</span></a> </div>
+                            <span class="slash ">/</span>
+                            <div class="title ">
+                                <a href="invest/options.html" class=" title-link"><span>Smart Farms</span></a> </div>
+                            <span class="slash ">/</span>
+                            <div class="title ">
+                                <a href="invest/crypto.html" class=" title-link"><span>Wine</span></a> </div>
+                            <span class="slash ">/</span>
+                            <div class="title ">
+                                <a href="invest/etfs.html" class=" title-link"><span>Equities</span></a> </div>
+                            <span class="slash ">/</span>
+                           
+                        </h1>
+                    </div>
+
+                    <div class="span-highlights">
+
+                        <div class="highlight item-1" data-peekaboo>
+
+                            <div class="span-container">
+                                <div class="span-content">
+                                    <span class="label">
+                                        Bond Account </span>
+                                    <h4 class="h1">5.9% yield.*<br>Locked in.</h4>
+                                    <span class="content">
+                                        Now, you can lock in a 5.9% yield that won't change if the Fed cuts rates with a
+                                        diversified portfolio of investment-grade and high-yield bonds. <a
+                                            href="bond-account.html" class="btn-plain"><span>Learn more</span></a>
+                                    </span>
+
+                                    <div class="span-disclosure">
+
+                                        <div class="hp-tooltip align-none">
+
+                                            <span class="title">
+                                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M5 0C2.23828 0 0 2.23828 0 5C0 7.76172 2.23828 10 5 10C7.76172 10 10 7.76172 10 5C10 2.23828 7.76172 0 5 0ZM5 9.0625C2.75977 9.0625 0.9375 7.24004 0.9375 5C0.9375 2.75996 2.75977 0.9375 5 0.9375C7.24023 0.9375 9.0625 2.75996 9.0625 5C9.0625 7.24004 7.24023 9.0625 5 9.0625ZM5.78125 6.5625H5.46875V4.84375C5.46875 4.58594 5.25977 4.375 5 4.375H4.375C4.11719 4.375 3.90625 4.58594 3.90625 4.84375C3.90625 5.10156 4.11719 5.3125 4.375 5.3125H4.53125V6.5625H4.21875C3.96094 6.5625 3.75 6.77344 3.75 7.03125C3.75 7.28906 3.96094 7.5 4.21875 7.5H5.78125C6.04004 7.5 6.25 7.29004 6.25 7.03125C6.25 6.77246 6.04102 6.5625 5.78125 6.5625ZM5 3.75C5.34512 3.75 5.625 3.47012 5.625 3.125C5.625 2.77988 5.34512 2.5 5 2.5C4.65488 2.5 4.375 2.7793 4.375 3.125C4.375 3.4707 4.6543 3.75 5 3.75Z" />
+                                                </svg>Bond Account Disclosure </span>
+                                            <div class="tooltip-content">
+                                                <div class="bg">
+                                                    <p>*This yield is the current average, annualized yield to worst
+                                                        (YTW) across all ten bonds in the Bond Account, before fees.
+                                                        Because the YTW of each bond is a function of that bond’s market
+                                                        price, which can fluctuate, your yield at time of purchase may
+                                                        be different from the yield shown here and YTW is not “locked
+                                                        in” until the time of purchase. A bond’s YTW is not guaranteed;
+                                                        you can earn less than that YTW if you do not hold the bonds to
+                                                        maturity or the issuer defaults. <a
+                                                            href="disclosures/Bond-Account-Disclosure-1.pdf">Learn
+                                                            more</a>.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="span-lottie" data-animate="homepage/01">
+                                <div></div>
+                            </div>
+
+                            <noscript>
+                                <img src="wp-content/themes/public/templates/post-type/page/homepage/assets/images/01.png"
+                                    alt="01 Png" width="628" height="400" loading="lazy" class="inline-image"
+                                    fetchpriority="auto" /></noscript>
+                        </div>
+                        <div class="highlight item-2" data-peekaboo>
+
+                            <div class="span-container">
+                                <div class="span-content">
+                                    <span class="label">
+                                        Options Trading </span>
+                                    <h4 class="h1">Trade options.<br>Earn rebates.</h4>
+                                    <span class="content">
+                                        Public is the only investing platform with options trading rebates. Earn
+                                        $0.06–$0.18 per stock or ETF contract, based on your monthly trading volume. <a
+                                            href="invest/options.html" class="btn-plain"><span>Learn more</span></a>
+                                    </span>
+
+                                    <div class="span-disclosure">
+
+                                        <div class="hp-tooltip align-none">
+
+                                            <span class="title">
+                                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M5 0C2.23828 0 0 2.23828 0 5C0 7.76172 2.23828 10 5 10C7.76172 10 10 7.76172 10 5C10 2.23828 7.76172 0 5 0ZM5 9.0625C2.75977 9.0625 0.9375 7.24004 0.9375 5C0.9375 2.75996 2.75977 0.9375 5 0.9375C7.24023 0.9375 9.0625 2.75996 9.0625 5C9.0625 7.24004 7.24023 9.0625 5 9.0625ZM5.78125 6.5625H5.46875V4.84375C5.46875 4.58594 5.25977 4.375 5 4.375H4.375C4.11719 4.375 3.90625 4.58594 3.90625 4.84375C3.90625 5.10156 4.11719 5.3125 4.375 5.3125H4.53125V6.5625H4.21875C3.96094 6.5625 3.75 6.77344 3.75 7.03125C3.75 7.28906 3.96094 7.5 4.21875 7.5H5.78125C6.04004 7.5 6.25 7.29004 6.25 7.03125C6.25 6.77246 6.04102 6.5625 5.78125 6.5625ZM5 3.75C5.34512 3.75 5.625 3.47012 5.625 3.125C5.625 2.77988 5.34512 2.5 5 2.5C4.65488 2.5 4.375 2.7793 4.375 3.125C4.375 3.4707 4.6543 3.75 5 3.75Z" />
+                                                </svg>Options Disclosures </span>
+                                            <div class="tooltip-content">
+                                                <div class="bg">
+                                                    <p>*Options are risky and are not suitable for all investors. To
+                                                        learn more read the <a
+                                                            href="https://www.theocc.com/company-information/documents-and-archives/options-disclosure-document">Options
+                                                            Disclosure Document</a>. See terms & conditions for
+                                                        enrolling in Public’s options rebates at <a class="basic"
+                                                            href="disclosures/Options-Order-Flow-Rebate-Program-TCs-06.03.2025.pdf">public.com/disclosures/rebate-terms.</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="span-media">
+                                <div class="span-image">
+                                    <img src="wp-content/themes/public/templates/post-type/page/homepage/assets/images/home-options-lottie.webp"
+                                        alt="Home Options Lottie Webp" width="1256" height="800" loading="lazy"
+                                        class="ira-offer-poster" fetchpriority="auto" /> </div>
+                            </div>
+                        </div>
+                        <div class="highlight item-3" data-peekaboo>
+
+                            <div class="span-container">
+                                <div class="span-content">
+                                    <span class="label">
+                                        High-Yield Cash Account </span>
+                                    <h4 class="h1">Earn 4.1% APY*<br>on your cash</h4>
+                                    <span class="content">
+                                        Our High-Yield Cash Account offers an industry-leading 4.1% APY with no fees or
+                                        balance requirements. Plus, you get up to $5M FDIC insurance. <a
+                                            href="high-yield-cash-account.html" class="btn-plain"><span>Learn
+                                                more</span></a> </span>
+
+                                    <div class="span-disclosure">
+
+                                        <div class="hp-tooltip align-none">
+
+                                            <span class="title">
+                                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M5 0C2.23828 0 0 2.23828 0 5C0 7.76172 2.23828 10 5 10C7.76172 10 10 7.76172 10 5C10 2.23828 7.76172 0 5 0ZM5 9.0625C2.75977 9.0625 0.9375 7.24004 0.9375 5C0.9375 2.75996 2.75977 0.9375 5 0.9375C7.24023 0.9375 9.0625 2.75996 9.0625 5C9.0625 7.24004 7.24023 9.0625 5 9.0625ZM5.78125 6.5625H5.46875V4.84375C5.46875 4.58594 5.25977 4.375 5 4.375H4.375C4.11719 4.375 3.90625 4.58594 3.90625 4.84375C3.90625 5.10156 4.11719 5.3125 4.375 5.3125H4.53125V6.5625H4.21875C3.96094 6.5625 3.75 6.77344 3.75 7.03125C3.75 7.28906 3.96094 7.5 4.21875 7.5H5.78125C6.04004 7.5 6.25 7.29004 6.25 7.03125C6.25 6.77246 6.04102 6.5625 5.78125 6.5625ZM5 3.75C5.34512 3.75 5.625 3.47012 5.625 3.125C5.625 2.77988 5.34512 2.5 5 2.5C4.65488 2.5 4.375 2.7793 4.375 3.125C4.375 3.4707 4.6543 3.75 5 3.75Z" />
+                                                </svg>High-Yield Cash Account Disclosure </span>
+                                            <div class="tooltip-content">
+                                                <div class="bg">
+                                                    <p>*Rate is subject to change. Learn more at <a class="basic"
+                                                            href="disclosures/HIGH-YIELD-CASH-ACCOUNT-TERMS-AND-CONDITIONS-Effective-October-3-2024.pdf">public.com/disclosures/high-yield-account.</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="span-lottie" data-animate="homepage/03">
+                                <div></div>
+                            </div>
+
+                            <noscript>
+                                <img src="wp-content/themes/public/templates/post-type/page/homepage/assets/images/03.png"
+                                    alt="03 Png" width="1256" height="800" loading="lazy" class="inline-image"
+                                    fetchpriority="auto" /></noscript>
+                        </div>
+                    </div>
+                </div>
+            </section>
+          
+            <section class="section section-alpha">
+                <div class="container">
+                    <div class="content">
+                        <div class="span-title">
+                            <span class="kicker ">Alpha</span>
+                            <h2><span>AI for investors.</span><br />
+                                Research and proactive insights.</h2>
+                        </div>
+                        <div class="span-highlights">
+                            <ul>
+                                <li>
+                                    <span class="icon"><img width="1" height="1"
+                                            src="wp-content/uploads/2025/07/icon-pie.svg"
+                                            class="attachment-thumbnail size-thumbnail" alt="Icon Pie"
+                                            decoding="async" /></span>
+                                    <p>Ask any question about any stock.</p>
+                                </li>
+                                <li>
+                                    <span class="icon"><img width="1" height="1"
+                                            src="wp-content/uploads/2025/07/icon-traffic.svg"
+                                            class="attachment-thumbnail size-thumbnail" alt="Icon Traffic"
+                                            decoding="async" /></span>
+                                    <p>Receive earnings call breakdowns the minute they hang up.</p>
+                                </li>
+                                <li>
+                                    <span class="icon"><img width="1" height="1"
+                                            src="wp-content/uploads/2025/07/icon-heart.svg"
+                                            class="attachment-thumbnail size-thumbnail" alt="Icon Heart"
+                                            decoding="async" /></span>
+                                    <p>Know why a stock is moving—not just that it is.</p>
+                                </li>
+                            </ul>
+
+                            <a href="alpha.html" class="btn-plain"><span>Learn more</span></a>
+                        </div>
+
+                        <div class="span-disclosure">
+
+                            <div class="hp-tooltip align-none">
+
+                                <span class="title">
+                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M5 0C2.23828 0 0 2.23828 0 5C0 7.76172 2.23828 10 5 10C7.76172 10 10 7.76172 10 5C10 2.23828 7.76172 0 5 0ZM5 9.0625C2.75977 9.0625 0.9375 7.24004 0.9375 5C0.9375 2.75996 2.75977 0.9375 5 0.9375C7.24023 0.9375 9.0625 2.75996 9.0625 5C9.0625 7.24004 7.24023 9.0625 5 9.0625ZM5.78125 6.5625H5.46875V4.84375C5.46875 4.58594 5.25977 4.375 5 4.375H4.375C4.11719 4.375 3.90625 4.58594 3.90625 4.84375C3.90625 5.10156 4.11719 5.3125 4.375 5.3125H4.53125V6.5625H4.21875C3.96094 6.5625 3.75 6.77344 3.75 7.03125C3.75 7.28906 3.96094 7.5 4.21875 7.5H5.78125C6.04004 7.5 6.25 7.29004 6.25 7.03125C6.25 6.77246 6.04102 6.5625 5.78125 6.5625ZM5 3.75C5.34512 3.75 5.625 3.47012 5.625 3.125C5.625 2.77988 5.34512 2.5 5 2.5C4.65488 2.5 4.375 2.7793 4.375 3.125C4.375 3.4707 4.6543 3.75 5 3.75Z" />
+                                    </svg>Alpha Disclosures </span>
+                                <div class="tooltip-content">
+                                    <div class="bg">
+                                        <p>*Alpha is an experiment brought to you by Public Holdings, Inc. (“Public”).
+                                            Alpha is an artificial intelligence investment exploration tool powered by
+                                            GPT-4, a generative large language model offered by OpenAI. Given that Alpha
+                                            is an experimental technology, it may sometimes give inaccurate or
+                                            inappropriate information. Any output generated by Alpha is not and should
+                                            not be construed as investment research, investment advice, or a
+                                            recommendation to buy or sell a security, nor should any output serve as the
+                                            basis for any investment decisions. Alpha output is provided “as is” and
+                                            Public makes no representations or warranties with respect to the accuracy,
+                                            completeness, quality, timeliness, or any other characteristic of Alpha
+                                            output. We strongly recommend that you independently evaluate and verify the
+                                            accuracy of any Alpha output for your use case. Learn more at <a
+                                                class="basic" href="disclosures.html">public.com/disclosures.</a></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="span-media">
+                        <img src="" data-src="wp-content/uploads/2025/07/home-alpha-poster.png" width="1038"
+                            height="1038" alt="Home Alpha Poster" class="lazy"> </div>
+                </div>
+            </section>
+            <section class="section section-features-2">
+                <div class="container">
+                    <h2>Secure by design.<br><span>Transparent by choice.</span></h2>
+                    <div class="span-features">
+                        <div class="feature">
+                            <div class="feature-intro">
+                                <h4>Regulated in the US</h4>
+                                <p>Brokerage services for US-listed, registered securities are offered through Public
+                                    Investing, Inc., a registered broker-dealer and FINRA/SIPC member.</p>
+                            </div>
+
+
+                            <div class="span-logos">
+                                <span class="logo first">
+                                    <img width="97" height="25" src="wp-content/uploads/2024/11/FINRA_logo.png"
+                                        class="attachment-medium size-medium" alt="Finra Logo" decoding="async" />
+                                </span>
+                            </div>
+
+                        </div>
+                        <div class="feature">
+                            <div class="feature-intro">
+                                <h4>Insurance coverage</h4>
+                                <p>SIPC protects the cash and securities in your portfolio up to $500,000. FDIC provides
+                                    up to $5 million in protection for your High-Yield Cash Account.</p>
+                            </div>
+
+
+                            <div class="span-logos">
+                                <span class="logo first">
+                                    <img width="62" height="24" src="wp-content/uploads/2024/11/FDIC-logo.png"
+                                        class="attachment-medium size-medium" alt="Fdic Logo" decoding="async" />
+                                </span>
+                                <span class="logo second">
+                                    <img width="59" height="24" src="wp-content/uploads/2024/11/SIPC-logo.png"
+                                        class="attachment-medium size-medium" alt="Sipc Logo" decoding="async" />
+                                </span>
+                            </div>
+
+                        </div>
+                        <div class="feature">
+                            <div class="feature-intro">
+                                <h4>Financial-grade security</h4>
+                                <p>We secure your data on Public with AES 256-bit encryption and the latest TLS
+                                    protocols, ensuring your information stays protected at all times.</p>
+                            </div>
+
+
+
+                        </div>
+                        <div class="feature">
+                            <div class="feature-intro">
+                                <h4>Order integrity</h4>
+                                <p>Unlike other brokerages, Public does not take payment for order flow from market
+                                    makers on equity trades, supporting more transparent markets.</p>
+                            </div>
+
+                            <a href="https://help.public.com/en/articles/3701324-how-does-public-make-money"
+                                class="link-plain"><span>Learn more</span></a>
+
+                        </div>
+                        <div class="feature">
+                            <div class="feature-intro">
+                                <h4>Fee transparency</h4>
+                                <p>Our straightforward fee structure can help you understand exactly what things
+                                    cost—and what our incentives are as a business. </p>
+                            </div>
+
+                            <a href="disclosures/Public-Fee-Schedule-07.01.2025.pdf" class="link-plain"><span>Learn
+                                    about fees on Public</span></a>
+
+                        </div>
+                        <div class="feature">
+                            <div class="feature-intro">
+                                <h4>99.994% uptime</h4>
+                                <p>Our reliable platform achieves 99.994% uptime, keeping you connected to the markets
+                                    whenever you need, so you never miss an opportunity to invest.</p>
+                                <p><small>Based on calendar year 2024</small></p>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+
+                    <div class="span-media">
+                        <span class="video-wrap lazy"> <video loop lazy muted autoplay playsinline width="1440"
+                                height="900" data-vidsm-src="wp-content/uploads/2024/11/Features_2_Background_V2.mp4"
+                                data-vidsm-mime="video/mp4"
+                                data-vidmd-src="wp-content/uploads/2024/11/Features_2_Background_V2.mp4"
+                                data-vidmd-mime="video/mp4" class="autoplay lazy"> </video></span> <noscript>
+                            <img src="wp-content/themes/public/templates/post-type/page/homepage/assets/images/Security.png"
+                                alt="Security Png" width="2880" height="1800" loading="lazy" class="inline-image"
+                                fetchpriority="auto" /> </noscript>
+                    </div>
+                </div>
+            </section>
+            <section class="section section-benefits">
+                <div class="container">
+
+                    <div class="span-title">
+                        <p>ACCOUNT BENEFITS</p>
+                        <h2>As your account value grows,<br><span>so does your experience on Public</span></h2>
+                    </div>
+
+                    <div class="span-benefits">
+                        <div class="benefit">
+                            <div class="benefit-intro">
+                                <p>Base</p>
+                                <h4>$1+<span>account value</span></h4>
+                            </div>
+
+                            <ul>
+                                <li>
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M13.7071 2.33199C14.0976 2.7193 14.0976 3.34829 13.7071 3.73559L5.70796 11.6677C5.31738 12.055 4.68307 12.055 4.29249 11.6677L0.292936 7.70164C-0.0976453 7.31433 -0.0976453 6.68534 0.292936 6.29803C0.683517 5.91072 1.31782 5.91072 1.7084 6.29803L5.00179 9.56073L12.2947 2.33199C12.6853 1.94468 13.3196 1.94468 13.7102 2.33199H13.7071Z"
+                                            fill="#4D74FF" />
+                                    </svg>
+                                    <p>Multi-asset investing</p>
+                                </li>
+                                <li>
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M13.7071 2.33199C14.0976 2.7193 14.0976 3.34829 13.7071 3.73559L5.70796 11.6677C5.31738 12.055 4.68307 12.055 4.29249 11.6677L0.292936 7.70164C-0.0976453 7.31433 -0.0976453 6.68534 0.292936 6.29803C0.683517 5.91072 1.31782 5.91072 1.7084 6.29803L5.00179 9.56073L12.2947 2.33199C12.6853 1.94468 13.3196 1.94468 13.7102 2.33199H13.7071Z"
+                                            fill="#4D74FF" />
+                                    </svg>
+                                    <p>Industry-leading yields</p>
+                                </li>
+                                <li>
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M13.7071 2.33199C14.0976 2.7193 14.0976 3.34829 13.7071 3.73559L5.70796 11.6677C5.31738 12.055 4.68307 12.055 4.29249 11.6677L0.292936 7.70164C-0.0976453 7.31433 -0.0976453 6.68534 0.292936 6.29803C0.683517 5.91072 1.31782 5.91072 1.7084 6.29803L5.00179 9.56073L12.2947 2.33199C12.6853 1.94468 13.3196 1.94468 13.7102 2.33199H13.7071Z"
+                                            fill="#4D74FF" />
+                                    </svg>
+                                    <p>AI-powered analysis</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="benefit">
+                            <div class="benefit-intro">
+                                <p>Premium</p>
+                                <h4>$50,000+<span>account value</span></h4>
+                            </div>
+
+                            <ul>
+                                <li>
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M13.7071 2.33199C14.0976 2.7193 14.0976 3.34829 13.7071 3.73559L5.70796 11.6677C5.31738 12.055 4.68307 12.055 4.29249 11.6677L0.292936 7.70164C-0.0976453 7.31433 -0.0976453 6.68534 0.292936 6.29803C0.683517 5.91072 1.31782 5.91072 1.7084 6.29803L5.00179 9.56073L12.2947 2.33199C12.6853 1.94468 13.3196 1.94468 13.7102 2.33199H13.7071Z"
+                                            fill="#4D74FF" />
+                                    </svg>
+                                    <p>Free extended-hours trading</p>
+                                </li>
+                                <li>
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M13.7071 2.33199C14.0976 2.7193 14.0976 3.34829 13.7071 3.73559L5.70796 11.6677C5.31738 12.055 4.68307 12.055 4.29249 11.6677L0.292936 7.70164C-0.0976453 7.31433 -0.0976453 6.68534 0.292936 6.29803C0.683517 5.91072 1.31782 5.91072 1.7084 6.29803L5.00179 9.56073L12.2947 2.33199C12.6853 1.94468 13.3196 1.94468 13.7102 2.33199H13.7071Z"
+                                            fill="#4D74FF" />
+                                    </svg>
+                                    <p>Free Investment Plans</p>
+                                </li>
+                                <li>
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M13.7071 2.33199C14.0976 2.7193 14.0976 3.34829 13.7071 3.73559L5.70796 11.6677C5.31738 12.055 4.68307 12.055 4.29249 11.6677L0.292936 7.70164C-0.0976453 7.31433 -0.0976453 6.68534 0.292936 6.29803C0.683517 5.91072 1.31782 5.91072 1.7084 6.29803L5.00179 9.56073L12.2947 2.33199C12.6853 1.94468 13.3196 1.94468 13.7102 2.33199H13.7071Z"
+                                            fill="#4D74FF" />
+                                    </svg>
+                                    <p>Priority support</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="benefit">
+                            <div class="benefit-intro">
+                                <p>Concierge</p>
+                                <h4>$500,000+<span>account value</span></h4>
+                            </div>
+
+                            <ul>
+                                <li>
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M13.7071 2.33199C14.0976 2.7193 14.0976 3.34829 13.7071 3.73559L5.70796 11.6677C5.31738 12.055 4.68307 12.055 4.29249 11.6677L0.292936 7.70164C-0.0976453 7.31433 -0.0976453 6.68534 0.292936 6.29803C0.683517 5.91072 1.31782 5.91072 1.7084 6.29803L5.00179 9.56073L12.2947 2.33199C12.6853 1.94468 13.3196 1.94468 13.7102 2.33199H13.7071Z"
+                                            fill="#4D74FF" />
+                                    </svg>
+                                    <p>White-glove VIP support</p>
+                                </li>
+                                <li>
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M13.7071 2.33199C14.0976 2.7193 14.0976 3.34829 13.7071 3.73559L5.70796 11.6677C5.31738 12.055 4.68307 12.055 4.29249 11.6677L0.292936 7.70164C-0.0976453 7.31433 -0.0976453 6.68534 0.292936 6.29803C0.683517 5.91072 1.31782 5.91072 1.7084 6.29803L5.00179 9.56073L12.2947 2.33199C12.6853 1.94468 13.3196 1.94468 13.7102 2.33199H13.7071Z"
+                                            fill="#4D74FF" />
+                                    </svg>
+                                    <p>Personalized offers</p>
+                                </li>
+                                <li>
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M13.7071 2.33199C14.0976 2.7193 14.0976 3.34829 13.7071 3.73559L5.70796 11.6677C5.31738 12.055 4.68307 12.055 4.29249 11.6677L0.292936 7.70164C-0.0976453 7.31433 -0.0976453 6.68534 0.292936 6.29803C0.683517 5.91072 1.31782 5.91072 1.7084 6.29803L5.00179 9.56073L12.2947 2.33199C12.6853 1.94468 13.3196 1.94468 13.7102 2.33199H13.7071Z"
+                                            fill="#4D74FF" />
+                                    </svg>
+                                    <p>Exclusive invites</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <a href="https://public.sng.link/Ag0a8/f14v?_ios_dl=matador%3A%2F%2F&amp;_android_dl=public%3A%2F%2F&amp;_smtype=3"
+                        class="cta btn-blue-gradient"><span>Sign up</span></a>
+                </div>
+            </section>
+            <section class="section section-support">
+                <div class="container">
+                    <div class="span-content">
+                        <h2>We’re here to help.<br><span>Not upsell.</span></h2>
+                        <ul>
+                            <li>
+                                <span class="icon" data-peekaboo><img
+                                        src="wp-content/uploads/2024/11/color-flag-icon.svg" class="attachment-0 size-0"
+                                        alt="Color Flag Icon" decoding="async" /></span>
+                                <p>US-BASED</p>
+                            </li>
+                            <li>
+                                <span class="icon" data-peekaboo><img
+                                        src="wp-content/uploads/2024/11/black-check-icon.svg"
+                                        class="attachment-1 size-1" alt="Black Check Icon" decoding="async" /></span>
+                                <p>REGISTERED</p>
+                            </li>
+                            <li>
+                                <span class="icon" data-peekaboo><img
+                                        src="wp-content/uploads/2024/11/red-heart-icon.svg" class="attachment-2 size-2"
+                                        alt="Red Heart Icon" decoding="async" /></span>
+                                <p>ACTUALLY CARES</p>
+                            </li>
+                        </ul>
+                        <p>Our <span>award-winning</span> customer support team of financial representatives is here to
+                            help you with everything from transferring a portfolio to understanding your account
+                            features.</p>
+                    </div>
+
+                    <div class="span-concierge">
+                        <img src="wp-content/uploads/2025/07/logo-concierge-black.svg" alt="Logo Concierge Black"
+                            width="131" height="18" loading="lazy" class="wp-image logo-concierge-black-svg"
+                            fetchpriority="auto">
+                        <h2>
+                            Get a dedicated account manager.<br />
+                            <span>One you’ll actually know by name.</span> </h2>
+
+                        <ul>
+                            <li>White-glove, dedicated support
+                            </li>
+                            <li>Exclusive invitations and events
+                            </li>
+                            <li>Available to members with $500K+ account balance</li>
+                        </ul>
+                        <a href="#modal-concierge" class="btn-transparent rounded" data-toggle="modal"
+                            data-target="modal-concierge">
+                            Contact Us </a>
+                    </div>
+                    <div id="modal-concierge" class="modal">
+                        <div class="modal-inner">
+                            <header>
+                                <a href="#modal-concierge" data-toggle="modal" data-target="modal-concierge"
+                                    class="close">
+                                    <span class="sr-only">Close window</span>
+                                </a>
+                            </header>
+                            <div class="modal-body">
+                                <h2>Public concierge</h2>
+                                <h3>Contact your concierge team</h3>
+                                <p>We've received your request will be in touch in 1-2 business days.</p>
+                                <script type="text/javascript"></script>
+                                <div class='gf_browser_unknown gform_wrapper gravity-theme gform-theme--no-framework form-concierge_wrapper form-page-1_wrapper'
+                                    data-form-theme='gravity-theme' data-form-index='0' id='gform_wrapper_14'>
+                                    <div class='gform_heading'>
+                                        <p class='gform_required_legend'>&quot;<span
+                                                class="gfield_required gfield_required_asterisk">*</span>&quot;
+                                            indicates required fields</p>
+                                    </div>
+                                    <form method='post' enctype='multipart/form-data' target='gform_ajax_frame_14'
+                                        id='gform_14' class='form-concierge form-page-1' action='index.html'
+                                        data-formid='14' novalidate>
+                                        <div class='gform-body gform_body'>
+                                            <div id='gform_fields_14'
+                                                class='gform_fields top_label form_sublabel_below description_below validation_below'>
+                                                <div id="field_14_2"
+                                                    class="gfield gfield-text gfield--type-text gfield--input-type-text gfield--width-full gfield_contains_required  gfield--no-description  field_validation_below "
+                                                    data-js-reload="field_14_2"><label
+                                                        class='gfield_label gform-field-label' for='input_14_2'>Full
+                                                        Name<span class="gfield_required"><span
+                                                                class="gfield_required gfield_required_asterisk">*</span></span></label>
+                                                    <div class='ginput_container ginput_container_text'><input
+                                                            name='input_2' id='input_14_2' type='text' value=''
+                                                            class='large' placeholder='Full Name' aria-required="true"
+                                                            aria-invalid="false" /></div>
+                                                </div>
+                                                <div id="field_14_1"
+                                                    class="gfield gfield-email gfield--type-email gfield--input-type-email gfield_contains_required  gfield--no-description  field_validation_below "
+                                                    data-js-reload="field_14_1"><label
+                                                        class='gfield_label gform-field-label'
+                                                        for='input_14_1'>Email<span class="gfield_required"><span
+                                                                class="gfield_required gfield_required_asterisk">*</span></span></label>
+                                                    <div class='ginput_container ginput_container_email'>
+                                                        <input name='input_1' id='input_14_1' type='email' value=''
+                                                            class='large' placeholder='Email address'
+                                                            aria-required="true" aria-invalid="false" />
+                                                    </div>
+                                                </div>
+                                                <div id="field_14_3"
+                                                    class="gfield gfield-honeypot gfield--type-honeypot gform_validation_container  gfield--has-description  field_validation_below "
+                                                    data-js-reload="field_14_3"><label
+                                                        class='gfield_label gform-field-label'
+                                                        for='input_14_3'>Phone</label>
+                                                    <div class='ginput_container'><input name='input_3' id='input_14_3'
+                                                            type='text' value='' autocomplete='new-password' /></div>
+                                                    <div class='gfield_description' id='gfield_description_14_3'>This
+                                                        field is for validation purposes and should be left unchanged.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class='gform-footer gform_footer top_label'>
+                                            <div><button type="submit" id="gform_submit_button_14"
+                                                    class="gform_button button"
+                                                    onclick="gform.submission.handleButtonClick(this);">Submit</button>
+                                            </div> <input type='hidden' name='gform_ajax'
+                                                value='form_id=14&amp;title=&amp;description=&amp;tabindex=0&amp;theme=gravity-theme&amp;hash=11a2bf148f9707391dcd233b4cd6ae1d' />
+                                            <input type='hidden' class='gform_hidden' name='gform_submission_method'
+                                                data-js='gform_submission_method_14' value='iframe' />
+                                            <input type='hidden' class='gform_hidden' name='gform_theme'
+                                                data-js='gform_theme_14' id='gform_theme_14' value='gravity-theme' />
+                                            <input type='hidden' class='gform_hidden' name='gform_style_settings'
+                                                data-js='gform_style_settings_14' id='gform_style_settings_14'
+                                                value='' />
+                                            <input type='hidden' class='gform_hidden' name='is_submit_14' value='1' />
+                                            <input type='hidden' class='gform_hidden' name='gform_submit' value='14' />
+
+                                            <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+                                            <input type='hidden' class='gform_hidden' name='state_14'
+                                                value='WyJbXSIsIjFhZjI0MTNlMDg0Y2ZmODA3ZTEwODU1NGY1OWI4MmRmIl0=' />
+                                            <input type='hidden' autocomplete='off' class='gform_hidden'
+                                                name='gform_target_page_number_14' id='gform_target_page_number_14'
+                                                value='0' />
+                                            <input type='hidden' autocomplete='off' class='gform_hidden'
+                                                name='gform_source_page_number_14' id='gform_source_page_number_14'
+                                                value='1' />
+                                            <input type='hidden' name='gform_field_values' value='' />
+
+                                        </div>
+                                    </form>
+                                </div>
+                                <iframe style='display:none;width:0px;height:0px;' src='about:blank'
+                                    name='gform_ajax_frame_14' id='gform_ajax_frame_14'
+                                    title='This iframe contains the logic required to handle Ajax powered Gravity Forms.'></iframe>
+                                <script type="text/javascript">
+                                    /* <![CDATA[ */
+                                    gform.initializeOnLoaded(function () {
+                                        gformInitSpinner(14,
+                                            'https://hellopublic.wpengine.com/wp-content/plugins/gravityforms/images/spinner.svg',
+                                            true);
+                                        jQuery('#gform_ajax_frame_14').on('load', function () {
+                                            var contents = jQuery(this).contents().find('*').html();
+                                            var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;
+                                            if (!is_postback) {
+                                                return;
+                                            }
+                                            var form_content = jQuery(this).contents().find(
+                                                '#gform_wrapper_14');
+                                            var is_confirmation = jQuery(this).contents().find(
+                                                '#gform_confirmation_wrapper_14').length > 0;
+                                            var is_redirect = contents.indexOf('gformRedirect(){') >= 0;
+                                            var is_form = form_content.length > 0 && !is_redirect && !
+                                                is_confirmation;
+                                            var mt = parseInt(jQuery('html').css('margin-top'), 10) +
+                                                parseInt(jQuery('body').css('margin-top'), 10) + 100;
+                                            if (is_form) {
+                                                jQuery('#gform_wrapper_14').html(form_content.html());
+                                                if (form_content.hasClass('gform_validation_error')) {
+                                                    jQuery('#gform_wrapper_14').addClass(
+                                                        'gform_validation_error');
+                                                } else {
+                                                    jQuery('#gform_wrapper_14').removeClass(
+                                                        'gform_validation_error');
+                                                }
+                                                setTimeout(function () {
+                                                        /* delay the scroll by 50 milliseconds to fix a bug in chrome */ },
+                                                    50);
+                                                if (window['gformInitDatepicker']) {
+                                                    gformInitDatepicker();
+                                                }
+                                                if (window['gformInitPriceFields']) {
+                                                    gformInitPriceFields();
+                                                }
+                                                var current_page = jQuery(
+                                                    '#gform_source_page_number_14').val();
+                                                gformInitSpinner(14,
+                                                    'https://hellopublic.wpengine.com/wp-content/plugins/gravityforms/images/spinner.svg',
+                                                    true);
+                                                jQuery(document).trigger('gform_page_loaded', [14,
+                                                    current_page
+                                                ]);
+                                                window['gf_submitting_14'] = false;
+                                            } else if (!is_redirect) {
+                                                var confirmation_content = jQuery(this).contents().find(
+                                                    '.GF_AJAX_POSTBACK').html();
+                                                if (!confirmation_content) {
+                                                    confirmation_content = contents;
+                                                }
+                                                jQuery('#gform_wrapper_14').replaceWith(
+                                                    confirmation_content);
+                                                jQuery(document).trigger('gform_confirmation_loaded', [
+                                                    14
+                                                ]);
+                                                window['gf_submitting_14'] = false;
+                                                wp.a11y.speak(jQuery('#gform_confirmation_message_14')
+                                                    .text());
+                                            } else {
+                                                jQuery('#gform_14').append(contents);
+                                                if (window['gformRedirect']) {
+                                                    gformRedirect();
+                                                }
+                                            }
+                                            jQuery(document).trigger("gform_pre_post_render", [{
+                                                formId: "14",
+                                                currentPage: "current_page",
+                                                abort: function () {
+                                                    this.preventDefault();
+                                                }
+                                            }]);
+                                            if (event && event.defaultPrevented) {
+                                                return;
+                                            }
+                                            const gformWrapperDiv = document.getElementById(
+                                                "gform_wrapper_14");
+                                            if (gformWrapperDiv) {
+                                                const visibilitySpan = document.createElement("span");
+                                                visibilitySpan.id = "gform_visibility_test_14";
+                                                gformWrapperDiv.insertAdjacentElement("afterend",
+                                                    visibilitySpan);
+                                            }
+                                            const visibilityTestDiv = document.getElementById(
+                                                "gform_visibility_test_14");
+                                            let postRenderFired = false;
+
+                                            function triggerPostRender() {
+                                                if (postRenderFired) {
+                                                    return;
+                                                }
+                                                postRenderFired = true;
+                                                jQuery(document).trigger('gform_post_render', [14,
+                                                    current_page
+                                                ]);
+                                                gform.utils.trigger({
+                                                    event: 'gform/postRender',
+                                                    native: false,
+                                                    data: {
+                                                        formId: 14,
+                                                        currentPage: current_page
+                                                    }
+                                                });
+                                                gform.utils.trigger({
+                                                    event: 'gform/post_render',
+                                                    native: false,
+                                                    data: {
+                                                        formId: 14,
+                                                        currentPage: current_page
+                                                    }
+                                                });
+                                                if (visibilityTestDiv) {
+                                                    visibilityTestDiv.parentNode.removeChild(
+                                                        visibilityTestDiv);
+                                                }
+                                            }
+
+                                            function debounce(func, wait, immediate) {
+                                                var timeout;
+                                                return function () {
+                                                    var context = this,
+                                                        args = arguments;
+                                                    var later = function () {
+                                                        timeout = null;
+                                                        if (!immediate) func.apply(context,
+                                                            args);
+                                                    };
+                                                    var callNow = immediate && !timeout;
+                                                    clearTimeout(timeout);
+                                                    timeout = setTimeout(later, wait);
+                                                    if (callNow) func.apply(context, args);
+                                                };
+                                            }
+                                            const debouncedTriggerPostRender = debounce(function () {
+                                                triggerPostRender();
+                                            }, 200);
+                                            if (visibilityTestDiv && visibilityTestDiv.offsetParent ===
+                                                null) {
+                                                const observer = new MutationObserver((mutations) => {
+                                                    mutations.forEach((mutation) => {
+                                                        if (mutation.type ===
+                                                            'attributes' &&
+                                                            visibilityTestDiv
+                                                            .offsetParent !== null) {
+                                                            debouncedTriggerPostRender
+                                                        ();
+                                                            observer.disconnect();
+                                                        }
+                                                    });
+                                                });
+                                                observer.observe(document.body, {
+                                                    attributes: true,
+                                                    childList: false,
+                                                    subtree: true,
+                                                    attributeFilter: ['style', 'class'],
+                                                });
+                                            } else {
+                                                triggerPostRender();
+                                            }
+                                        });
+                                    });
+                                    /* ]]> */
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="section-cta-4" class="section section-cta-title-button ">
+                <div class="container">
+
+                    <div class="span-content">
+
+                        <h2>Fund your account in<br />
+                            <span>5 minutes or less</span></h2>
+
+                        <a href="https://public.sng.link/Ag0a8/f14v?_ios_dl=matador%3A%2F%2F&amp;_android_dl=public%3A%2F%2F&amp;_smtype=3"
+                            class="btn-blue-gradient rounded"><span>Sign up</span></a> </a>
+                    </div>
+
+                    <div class="span-media">
+                        <div class="image"><img width="1720" height="1166"
+                                src="wp-content/uploads/2024/12/cta-image-default.webp" class="image"
+                                alt="Cta Image Default" loading="lazy" decoding="async"
+                                srcset="wp-content/uploads/2024/12/cta-image-default.webp 1720w, wp-content/uploads/2024/12/cta-image-default-300x203.webp 300w, wp-content/uploads/2024/12/cta-image-default-1024x694.webp 1024w, wp-content/uploads/2024/12/cta-image-default-768x521.webp 768w, wp-content/uploads/2024/12/cta-image-default-1536x1041.webp 1536w"
+                                sizes="auto, (max-width: 1720px) 100vw, 1720px" /></div>
+                    </div>
+                </div>
+            </section>
+
+
+            <noscript>
+                <style type="text/css">
+                    .icon-gradient {
+                        background: none;
+                        background-color: #fafafa;
+                    }
+
+                    .section-support .span-lottie {
+                        width: 0px;
+                        height: 0px;
+                    }
+                </style>
+            </noscript>
+        </main>
+
+
+        <footer class="site-footer">
+
+            <div class="container-widgets">
+                <div class="container wide">
+                    <section class="widget nav_menu-2 widget_nav_menu">
+                        <h3 class="entry-title">Products</h3>
+                        <div class="menu-products-worldwide-container">
+                            <ul id="menu-products-worldwide" class="menu">
+                                <li class="menu-item menu-item-stocks"><a href="invest/stocks.html"
+                                        aria-label="Visit Stocks page">Stocks</a></li>
+                                <li class="menu-item menu-item-etfs"><a href="invest/etfs.html"
+                                        aria-label="Visit ETFs page">ETFs</a></li>
+                               
+                                <li class="menu-item menu-item-margin"><a href="invest/margin.html"
+                                        aria-label="Visit Margin page">Margin</a></li>
+                                <li class="menu-item menu-item-bonds"><a href="invest/bonds.html"
+                                        aria-label="Visit Bonds page">Bonds</a></li>
+                                <li class="menu-item menu-item-treasuries"><a href="invest/treasuries.html"
+                                        aria-label="Visit Treasuries page">Treasuries</a></li>
+                                <li class="menu-item menu-item-high-yield-cash-account"><a
+                                        href="high-yield-cash-account.html"
+                                        aria-label="Visit High-Yield Cash Account page">High-Yield Cash Account</a></li>
+                                <li class="menu-item menu-item-premium"><a href="premium.html"
+                                        aria-label="Visit Premium page">Premium</a></li>
+                                <li class="menu-item menu-item-alpha"><a href="alpha.html"
+                                        aria-label="Visit Alpha page">Alpha</a></li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="widget nav_menu-4 widget_nav_menu">
+                        <h3 class="entry-title">Resources</h3>
+                        <div class="menu-resources-worldwide-container">
+                            <ul id="menu-resources-worldwide" class="menu">
+                                <li class="menu-item menu-item-about-us"><a href="about-us.html"
+                                        aria-label="Visit About Us page">About Us</a></li>
+                                <li class="menu-item menu-item-learn"><a href="learn.html"
+                                        aria-label="Visit Learn page">Learn</a></li>
+                                <li class="menu-item menu-item-careers"><a href="careers.html"
+                                        aria-label="Visit Careers page">Careers</a></li>
+                                <li class="menu-item menu-item-publics-fee-schedule"><a
+                                        href="disclosures/Public-Fee-Schedule-07.01.2025.pdf"
+                                        aria-label="Visit Public&#039;s Fee Schedule page">Public&#8217;s Fee
+                                        Schedule</a></li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="widget nav_menu-5 widget_nav_menu">
+                        <h3 class="entry-title">Quick Links</h3>
+                        <div class="menu-quick-links-worldwide-container">
+                            <ul id="menu-quick-links-worldwide" class="menu">
+                                <li class="menu-item menu-item-investment-themes"><a href="themes.html"
+                                        aria-label="Visit Investment Themes page">Investment Themes</a></li>
+                                <li class="menu-item menu-item-investing-glossary"><a href="investing.html"
+                                        aria-label="Visit Investing Glossary page">Investing Glossary</a></li>
+                                <li class="menu-item menu-item-fixed-income-glossary"><a
+                                        href="glossary/fixed-income.html"
+                                        aria-label="Visit Fixed Income Glossary page">Fixed Income Glossary</a></li>
+                                <li class="menu-item menu-item-options-trading-glossary"><a href="options-trading.html"
+                                        aria-label="Visit Options Trading Glossary page">Options Trading Glossary</a>
+                                </li>
+                                <li class="menu-item menu-item-transfer-your-portfolio"><a href="transfer-account.html"
+                                        aria-label="Visit Transfer your Portfolio page">Transfer your Portfolio</a></li>
+                                <li class="menu-item menu-item-treasury-yield-curve"><a href="treasury-yield-curve.html"
+                                        aria-label="Visit Treasury Yield Curve page">Treasury Yield Curve</a></li>
+                                <li class="menu-item menu-item-high-yield-savings-calculator"><a
+                                        href="tools/high-yield-savings-calculator.html"
+                                        aria-label="Visit High Yield Savings Calculator page">High Yield Savings
+                                        Calculator</a></li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="widget text-4 widget_text">
+                        <h3 class="entry-title">Contact Us</h3>
+                        <div class="textwidget">
+                            <p><a id="intercom-show" class="link-text" style="margin-top: 12px;" href="#">Help</a><a
+                                    class="link-text" style="margin-top: 12px;" href="https://help.public.com">FAQ</a><a
+                                    class="link-text" style="margin-top: 12px;"
+                                    href="mailto:support@public.com">support@public.com</a><a class="link-text"
+                                    style="margin-top: 12px;" href="mailto:press@public.com">press@public.com</a><br />
+
+                                <ul class="social">
+                                    <li>
+                                        <a href="https://x.com/public" target="_blank" class="icon-social-twitter"
+                                            rel="nofollow noopener noreferrer">
+                                            <span class="svg-icon share-twitter"><svg class="svg-share-twitter"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <use
+                                                        xlink:href="/wp-content/themes/public/dist/sprite/spritemap.svg#sprite-share-twitter">
+                                                    </use>
+                                                </svg></span> <span class="sr-only">twitter</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/publicapp/" target="_blank"
+                                            class="icon-social-instagram" rel="nofollow noopener noreferrer">
+                                            <span class="svg-icon share-instagram"><svg class="svg-share-instagram"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <use
+                                                        xlink:href="/wp-content/themes/public/dist/sprite/spritemap.svg#sprite-share-instagram">
+                                                    </use>
+                                                </svg></span> <span class="sr-only">instagram</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.facebook.com/publichello" target="_blank"
+                                            class="icon-social-facebook" rel="nofollow noopener noreferrer">
+                                            <span class="svg-icon share-facebook"><svg class="svg-share-facebook"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <use
+                                                        xlink:href="/wp-content/themes/public/dist/sprite/spritemap.svg#sprite-share-facebook">
+                                                    </use>
+                                                </svg></span> <span class="sr-only">facebook</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.linkedin.com/company/publichello/" target="_blank"
+                                            class="icon-social-linkedin" rel="nofollow noopener noreferrer">
+                                            <span class="svg-icon share-linkedin"><svg class="svg-share-linkedin"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <use
+                                                        xlink:href="/wp-content/themes/public/dist/sprite/spritemap.svg#sprite-share-linkedin">
+                                                    </use>
+                                                </svg></span> <span class="sr-only">linkedin</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://medium.com/the-public-blog/" target="_blank"
+                                            class="icon-social-medium" rel="nofollow noopener noreferrer">
+                                            <span class="svg-icon share-medium"><svg class="svg-share-medium"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <use
+                                                        xlink:href="/wp-content/themes/public/dist/sprite/spritemap.svg#sprite-share-medium">
+                                                    </use>
+                                                </svg></span> <span class="sr-only">medium</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.tiktok.com/@public" target="_blank"
+                                            class="icon-social-tiktok" rel="nofollow noopener noreferrer">
+                                            <span class="svg-icon share-tiktok"><svg class="svg-share-tiktok"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <use
+                                                        xlink:href="/wp-content/themes/public/dist/sprite/spritemap.svg#sprite-share-tiktok">
+                                                    </use>
+                                                </svg></span> <span class="sr-only">tiktok</span>
+                                        </a>
+                                    </li>
+                                    <li class="label">Connect With Us</li>
+                                </ul>
+
+                                <br />
+                                <span class="appstore-links style-white"><a
+                                        href="https://public.sng.link/Ag0a8/f14v?_ios_dl=matador%3A%2F%2F&amp;_android_dl=public%3A%2F%2F&amp;_smtype=3"
+                                        class="store-apple yay-link" aria-label="Download the app from apple store"
+                                        rel="nofollow noopener noreferrer"><img decoding="async"
+                                            src="https://hellopublic.wpengine.com/wp-content/themes/public/templates/shared/static-components/appstore-links/assets/white/apple-badge.svg"
+                                            alt="download public app on apple store" width="165" height="56" /></a><a
+                                        href="https://public.sng.link/Ag0a8/f14v?_ios_dl=matador%3A%2F%2F&amp;_android_dl=public%3A%2F%2F&amp;_smtype=3"
+                                        class="store-google yay-link" aria-label="Download the app from google store"
+                                        rel="nofollow noopener noreferrer"><img decoding="async"
+                                            src="https://hellopublic.wpengine.com/wp-content/themes/public/templates/shared/static-components/appstore-links/assets/white/google-badge.svg"
+                                            alt="download public app on google store" width="165"
+                                            height="56" /></a></span>
+                            </p>
+                        </div>
+                    </section>
+                    <section class="widget text-3 widget_text">
+                        <div class="textwidget"><img decoding="async"
+                                src="wp-content/uploads/2022/11/public-logo-color.svg" alt="Public"
+                                class="inline-logo" />
+                            <p><small>Check the background of this firm on <a
+                                        title="Check the background on FINRA's BrokerCheck"
+                                        href="https://brokercheck.finra.org/" target="_blank"
+                                        rel="nofollow noopener noreferrer">FINRA&#8217;s BrokerCheck</a>.</small></p>
+                            <p><small><a title="Open to the Public Investing, Inc. Customer Relationship Summary"
+                                        href="https://files.brokercheck.finra.org/crs_127818.pdf" target="_blank"
+                                        rel="nofollow noopener noreferrer">Open to the Public Investing, Inc. Customer
+                                        Relationship Summary</a>.</small></p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+            <div id="disclosures-main" class="container-nav-footer">
+                <div class="container wide">
+                    <ul id="menu-footer-directory-worldwide" class="menu menu-footer">
+                        <li class="menu-item menu-item-disclosures"><a href="disclosures.html"
+                                aria-label="Visit Disclosures page">Disclosures</a></li>
+                        <li class="menu-item menu-item-privacy-policy"><a rel="privacy-policy"
+                                href="privacy-policy.html" aria-label="Visit Privacy Policy page">Privacy Policy</a>
+                        </li>
+                        <li class="menu-item menu-item-your-privacy-choices"><a href="privacy-policy.html#section-6"
+                                aria-label="Visit Your Privacy Choices page">Your Privacy Choices</a></li>
+                        <li class="menu-item menu-item-terms-of-service"><a href="terms-of-service.html"
+                                aria-label="Visit Terms of Service page">Terms of Service</a></li>
+                        <li class="menu-item menu-item-fractional-shares-disclosure"><a
+                                href="disclosures/Fractional-Shares-Trading-Disclosure-03.21.2024.pdf"
+                                aria-label="Visit Fractional Shares Disclosure page">Fractional Shares Disclosure</a>
+                        </li>
+                        <li class="menu-item menu-item-markets"><a href="markets/top-gainers.html"
+                                aria-label="Visit Markets page">Markets</a></li>
+                        <li class="menu-item menu-item-stocks-directory"><a href="directory/stocks.html"
+                                aria-label="Visit Stocks Directory page">Stocks Directory</a></li>
+                        <li class="menu-item menu-item-etfs-directory"><a href="directory/etfs.html"
+                                aria-label="Visit ETFs Directory page">ETFs Directory</a></li>
+                        <li class="menu-item menu-item-options-chain"><a href="directory/stocks-options-chain.html"
+                                aria-label="Visit Options Chain page">Options Chain</a></li>
+                        <li class="menu-item menu-item-bitcoin-etp-options"><a href="bitcoin-etp-options.html"
+                                aria-label="Visit Bitcoin ETP Options page">Bitcoin ETP Options</a></li>
+                        <li class="menu-item menu-item-how-to-buy-crypto"><a href="how-to-buy/crypto.html"
+                                aria-label="Visit How to buy Crypto page">How to buy Crypto</a></li>
+                        <li class="menu-item menu-item-buy-t-bills"><a href="treasuries/6-month-tbills.html"
+                                aria-label="Visit Buy T-bills page">Buy T-bills</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="container-copyright">
+                <div class="container wide">
+                    <p>&copy; Copyright 2025 Public Holdings, Inc. All Rights Reserved.</p>
+                    <p>Market data powered by <a href="https://xignite.com" target="_blank"
+                            rel="noopener noreferrer nofollow">Xignite</a>.</p>
+                    <p>
+                        <b>All investments</b> involve the risk of loss and the past performance of a security or a
+                        financial product does not guarantee future results or returns. You should consult your legal,
+                        tax, or financial advisors before making any financial decisions. This material is not intended
+                        as a recommendation, offer, or solicitation to purchase or sell securities, open a brokerage
+                        account, or engage in any investment strategy.</p>
+                    <p>
+                        <b>PUBLIC ADVISORS LLC</b></p>
+                    <p><b id="disclosures-treasuries">Treasury Accounts.</b><br />
+                        Investment advisory services for Treasury Accounts are provided by Public Advisors LLC (“Public
+                        Advisors”), an SEC-registered investment adviser. Brokerage services are provided by Public
+                        Investing (see below). Public Advisors and Public Investing are wholly-owned subsidiaries of
+                        Public Holdings, Inc. (“Public Holdings”), and both subsidiaries charge a fee for their
+                        respective Treasury Account services. Before investing, consider your investment objectives, all
+                        fees and expenses, and any potential conflicts of interest. For more details, see Public
+                        Advisors’ <a href="https://public.com/disclosures/public-customer-relationship-summary">Form
+                            CRS</a>, <a href="disclosures/Public-Advisors-Form-ADV-Part-2A-01.31.2025.pdf">Form ADV Part
+                            2A</a>, <a href="disclosures/Public-Fee-Schedule-07.01.2025.pdf">Fee Schedule</a>, and other
+                        disclosures. Past performance is no guarantee of future results. Any historical returns,
+                        expected returns, or probability projections are provided for informational and illustrative
+                        purposes, and may not reflect actual future performance.</p>
+                    <p>Investing in U.S. Treasuries securities (“Treasuries”) involves risks, including but not limited
+                        to, interest rate risk, credit risk, and market risk. Although Treasuries are considered safer
+                        than many other financial instruments, you can still lose all or part of your investment. Early
+                        withdrawal or sale prior to maturity of Treasuries may result in a loss of principal or impact
+                        returns. Reinvestment into new Treasuries is subject to market conditions and may result in
+                        different yields. As a general rule, the price of Treasuries moves inversely to changes in
+                        interest rates. Before investing, you should consider your tolerance for these risks and your
+                        overall investment objectives. For more details, see Public Advisors’ <a
+                            href="disclosures/Public-Advisors-Form-ADV-Part-2A-01.31.2025.pdf">Form ADV Part 2A</a>.</p>
+                    <p>
+                        <b>OPEN TO THE PUBLIC INVESTING, INC.</b></p>
+                    <p><b>Securities, Options, and Bonds.</b></p>
+                    <p>Self-directed brokerage accounts and brokerage services for US-listed, registered securities,
+                        options, and bonds (except for Treasuries offered through your Jiko Account) are offered to
+                        self-directed customers by Open to the Public Investing, Inc. (“Public Investing”), a registered
+                        broker-dealer and member of <a href="https://www.finra.org" target="_blank"
+                            rel="noopener noreferrer nofollow">FINRA</a> & <a href="https://www.sipc.org"
+                            target="_blank" rel="noopener noreferrer nofollow">SIPC</a>. Additional information about
+                        Public Investing can be found by clicking <a href="https://brokercheck.finra.org/"
+                            target="_blank" rel="noopener noreferrer nofollow">here</a>. Public Investing is a
+                        wholly-owned subsidiary of Public Holdings. This is not an offer, solicitation of an offer, or
+                        advice to buy or sell securities or open a brokerage account in any jurisdiction where Public
+                        Investing is not registered. Securities products offered by Public Investing are not FDIC
+                        insured. Apex Clearing Corporation, our clearing firm, has additional insurance coverage in
+                        excess of the regular SIPC limits. Additional information about SIPC can be found <a
+                            href="https://help.public.com/en/articles/6594797-frequently-asked-questions-sipc"
+                            target="_blank" rel="noopener noreferrer nofollow">here</a>. </p>
+                    <p>
+                        <b>Options.</b><br />
+                        Options trading entails significant risk and is not suitable for all investors. Options
+                        investors can rapidly lose the value of their investment in a short period of time and incur
+                        permanent loss by expiration date. Certain complex options strategies carry additional risk and
+                        costs. Investors must read and understand the <a
+                            href="https://www.theocc.com/company-information/documents-and-archives/options-disclosure-document"
+                            target="_blank" rel="noopener noreferrer nofollow">Characteristics and Risks of Standardized
+                            Options</a> before considering any options transaction. Index options have special features
+                        and fees that should be carefully considered, including settlement, exercise, expiration, tax,
+                        and cost characteristics. See <a href="disclosures/Public-Fee-Schedule-07.01.2025.pdf">Fee
+                            Schedule</a> for all options trading fees. Supporting documentation for any claims will be
+                        furnished upon request. To learn more about options rebates, see terms of the <a
+                            href="disclosures/Options-Order-Flow-Rebate-Program-TCs-06.03.2025.pdf">Options Rebate
+                            Program</a>. Rebate rates range from $0.06-$0.18 and depend on the underlying security,
+                        whether the trade was placed via API, and your current and prior month’s options trading volume.
+                        Rates and terms are subject to change at any time.</p>
+                    <p><b id="disclosures-etf-etp">ETFs & ETPs.</b><br />
+                        Before investing in an ETF, you should read the prospectus carefully, which provides detailed
+                        information on the fund’s investment objectives, risks, charges, and expenses and unique risk
+                        profile. Prospectuses can be found on the ETF issuer's website. All investments involve risks,
+                        including the loss of principal. Performance data represents past performance and is no
+                        guarantee of future results. Investment returns and principal value will fluctuate such that an
+                        investment, when redeemed, may be worth more or less than the original cost.</p>
+                    <p>A spot bitcoin exchange-traded product (“ETP”) is not an investment company registered under the
+                        Investment Company Act of 1940 (the “1940 Act”) and is not subject to regulation under the
+                        Commodity Exchange Act of 1936 (the “CEA”). As a result, shareholders do not have the
+                        protections associated with ownership of shares in an investment company registered under the
+                        1940 Act or the protections afforded by the CEA. The performance of a spot bitcoin ETP will not
+                        reflect the specific return an investor would realize if the investor actually purchased
+                        bitcoin. Investors will not have any rights that bitcoin holders have and will not have the
+                        right to receive any redemption proceeds in bitcoin. Digital assets like Bitcoin are highly
+                        speculative and may be subject to increased risk of price volatility, illiquidity, market
+                        manipulation, and loss, including loss of your entire investment.</p>
+                    <p>
+                        <b>Margin Accounts.</b><br />
+                        Margin investing increases your level of risk and has the potential to magnify your losses,
+                        including loss of more than your initial investment. Please assess your investment objectives,
+                        risk tolerance, and financial circumstances to determine whether margin is appropriate for you.
+                        You must repay your margin debt regardless of the underlying value of the securities you
+                        purchased. Public Investing can change its maintenance margin requirements at any time without
+                        prior notice. If the equity in your margin account falls below the minimum maintenance
+                        requirements, you may be required to deposit additional cash or securities. If you are unable to
+                        do so, Public Investing may sell some or all of your securities, without prior approval or
+                        notice. You are not entitled to an extension of time on a margin call. For more information
+                        please see Public Investing’s <a
+                            href="disclosures/OTTP-Margin-Disclosure-Statement-2024.09.19.pdf">Margin Disclosure
+                            Statement</a>, <a href="disclosures/Apex-Margin-and-Short-Account-Agreement.pdf">Margin
+                            Agreement</a>, and <a href="disclosures/Public-Fee-Schedule-07.01.2025.pdf">Fee
+                            Schedule</a>.</p>
+                    <p>
+                        <b id="disclosures-hyca">High-Yield Cash Account.</b><br />
+                        A High-Yield Cash Account is a secondary brokerage account with Public Investing. Funds in your
+                        High-Yield Cash Account are automatically deposited into partner banks (“Partner Banks”), where
+                        that cash earns interest and is eligible for FDIC insurance. See <a
+                            href="disclosures/APEX-High-Yield-Cash-Account-Bank-Partners-List-01.06.2025.pdf">here</a>
+                        for a list of current Partner Banks. Your Annual Percentage Yield is variable and may change at
+                        the discretion of the Partner Banks or Public Investing. Apex Clearing and Public Investing
+                        receive administrative fees for operating this program, which reduce the amount of interest paid
+                        on swept cash. Neither Public Investing nor any of its affiliates is a bank. <a
+                            href="disclosures/HIGH-YIELD-CASH-ACCOUNT-TERMS-AND-CONDITIONS-Effective-October-3-2024.pdf">Learn
+                            more</a>.</p>
+                    <p>
+                        <b id="disclosures-ira">Individual Retirement Accounts</b><br />
+                        Self-directed individual retirement accounts are offered by Public Investing, a registered
+                        broker-dealer and member of <a href="https://www.finra.org" target="_blank"
+                            rel="noopener noreferrer nofollow">FINRA</a> & <a href="https://www.sipc.org"
+                            target="_blank" rel="noopener noreferrer nofollow">SIPC</a>. Information about retirement
+                        accounts on Public is for educational purposes only and is not tax or investment advice. Consult
+                        your tax advisor for individual considerations. Visit the <a href="https://www.irs.gov"
+                            target="_blank" rel="noopener noreferrer nofollow">IRS website</a> for more information on
+                        the limitations and tax benefits of Traditional and Roth IRAs. All investing involves risk.</p>
+                    <p>As part of the <a href="disclosures/Public-IRA-Match-Program-Terms-Conditions-06.30.2025.pdf">IRA
+                            Match Program</a>, Public Investing will fund a 1% match of: (a) all IRA transfers and
+                        401(k) rollovers made to your Public IRA; and (b) all contributions made to your Public IRA up
+                        to the annual contribution limit. The matched funds must be kept in the IRA account for at least
+                        5 years to avoid an early removal fee. See full terms of the Program <a
+                            href="disclosures/Public-IRA-Match-Program-Terms-Conditions-06.30.2025.pdf">here</a>. Rate
+                        and terms are subject to change at any time.</p>
+                    <p><b>Bonds.</b><br />
+                        “Bonds” shall refer to corporate debt securities and U.S. government securities offered on the
+                        Public platform through a self-directed brokerage account held at Public Investing and custodied
+                        at Apex Clearing. For purposes of this section, Bonds exclude treasury securities held in your
+                        Jiko Account, as explained under the “Jiko Account” section.</p>
+                    <p>Investments in Bonds are subject to various risks including risks related to interest rates,
+                        credit quality, market valuations, liquidity, prepayments, early redemption, corporate events,
+                        tax ramifications and other factors. The value of Bonds fluctuate and any investments sold prior
+                        to maturity may result in gain or loss of principal. In general, when interest rates go up, Bond
+                        prices typically drop, and vice versa. Bonds with higher yields or offered by issuers with lower
+                        credit ratings generally carry a higher degree of risk. All fixed income securities are subject
+                        to price change and availability, and yield is subject to change. Bond ratings, if provided, are
+                        third party opinions on the overall bond's credit worthiness at the time the rating is assigned.
+                        Ratings are not recommendations to purchase, hold, or sell securities, and they do not address
+                        the market value of securities or their suitability for investment purposes.</p>
+                    <p><b>Bond Accounts</b><br />
+                        A Bond Account is a self-directed brokerage account with Public Investing. Deposits into this
+                        account are used to purchase 10 investment-grade and high-yield bonds. The Bond Account’s yield
+                        is the average, annualized yield to worst (YTW) across all ten bonds in the Bond Account, before
+                        fees. A bond’s yield is a function of its market price, which can fluctuate; therefore a bond’s
+                        YTW is not “locked in” until the bond is purchased, and your yield at time of purchase may be
+                        different from the yield shown here. The “locked in” YTW is not guaranteed; you may receive less
+                        than the YTW of the bonds in the Bond Account if you sell any of the bonds before maturity or if
+                        the issuer defaults on the bond. Public Investing charges a markup on each bond trade. See our
+                        <a href="disclosures/Public-Fee-Schedule-07.01.2025.pdf">Fee Schedule</a>.</p>
+                    <p>Bond Accounts are not recommendations of individual bonds or default allocations. The bonds in
+                        the Bond Account have not been selected based on your needs or risk profile. You should evaluate
+                        each bond before investing in a Bond Account. The bonds in your Bond Account will not be
+                        rebalanced and allocations will not be updated, except for Corporate Actions.</p>
+                    <p>Fractional Bonds also carry additional risks including that they are only available on Public and
+                        cannot be transferred to other brokerages. Read more about the risks associated with <a
+                            href="disclosures/Open-to-the-Public-Investing-Inc.-Fixed-Income-Disclosure.pdf">fixed
+                            income</a> and <a href="disclosures/OTTP-Apex-Fractional-Bond-Disclosure-1.pdf">fractional
+                            bonds</a>. See <a href="disclosures/Bond-Account-Disclosure-1.pdf">Bond Account
+                            Disclosures</a> to learn more.</p>
+                    <p><b>Trading Commissions</b><br />
+                        Commission-free trading refers to $0 commissions charged on trades of US listed registered
+                        securities placed during the U.S. Markets Regular Trading Hours in self-directed brokerage
+                        accounts offered by Public Investing. Keep in mind that other fees such as regulatory fees,
+                        Premium subscription fees, commissions on trades during extended trading hours, wire transfer
+                        fees, and paper statement fees may apply to your brokerage account. Please see <a
+                            href="disclosures/Public-Fee-Schedule-07.01.2025.pdf">Fee Schedule</a> to learn more. </p>
+                    <p>
+                        <b>Fractional Shares</b><br />
+                        Fractional shares are illiquid outside of Public and not transferable. For a complete
+                        explanation of conditions, restrictions and limitations associated with fractional shares, see
+                        our <a href="disclosures/Fractional-Shares-Trading-Disclosure-03.21.2024.pdf">Fractional Share
+                            Disclosure</a> to learn more. </p>
+                    <p><b id="disclosures-investment-plans">Investment Plans</b><br />
+                        Investment Plans (“Plans”) shown in our marketplace are for informational purposes only and are
+                        meant as helpful starting points as you discover, research and create a Plan that meets your
+                        specific investing needs. Plans are self-directed purchases of individually-selected assets,
+                        which may include stocks, ETFs and cryptocurrency. Plans are not recommendations of a Plan
+                        overall or its individual holdings or default allocations. Plans are created using defined,
+                        objective criteria based on generally accepted investment theory; they are not based on your
+                        needs or risk profile. You are responsible for establishing and maintaining allocations among
+                        assets within your Plan. Plans involve continuous investments, regardless of market conditions.
+                        Diversification does not eliminate risk. See our Investment Plans Terms and Conditions and
+                        Sponsored Content and Conflicts of Interest Disclosure.</p>
+                    <p>
+                        <b>PUBLIC HOLDINGS, INC.</b></p>
+                    <p><b id="disclosures-alpha">Alpha.</b><br />
+                        Alpha is an experiment brought to you by Public Holdings, Inc. (“Public”). Alpha is an AI
+                        research tool powered by GPT-4, a generative large language model. Alpha is experimental
+                        technology and may give inaccurate or inappropriate responses. Output from Alpha should not be
+                        construed as investment research or recommendations, and should not serve as the basis for any
+                        investment decision. All Alpha output is provided “as is.” Public makes no representations or
+                        warranties with respect to the accuracy, completeness, quality, timeliness, or any other
+                        characteristic of such output. Your use of Alpha output is at your sole risk. Please
+                        independently evaluate and verify the accuracy of any such output for your own use case.</p>
+                    <p><b>Market Data.</b><br />
+                        Quotes and other market data for Public’s product offerings are obtained from third party
+                        sources believed to be reliable, but Public Holdings and its affiliates make no representation
+                        or warranty regarding the quality, accuracy, timeliness, and/or completeness of this
+                        information. Such information is time sensitive and subject to change based on market conditions
+                        and other factors. You assume full responsibility for any trading decisions you make based upon
+                        the market data provided, and Public is not liable for any loss caused directly or indirectly by
+                        your use of such information. Market data is provided solely for informational and/or
+                        educational purposes only. It is not intended as a recommendation and does not represent a
+                        solicitation or an offer to buy or sell any particular security.</p>
+                    <p>
+                        <b>BAKKT CRYPTO SOLUTIONS, LLC</b></p>
+                    <p><b>Cryptocurrency.</b><br />
+                        Cryptocurrency trading, execution, and custody services are provided by Bakkt Crypto Solutions,
+                        LLC (NMLS ID 1828849) (“Bakkt”). Cryptocurrency is highly speculative, involves a high degree of
+                        risk, and has the potential for loss of the entire amount of an investment. Cryptocurrencies
+                        offered by Bakkt are not securities and are not FDIC insured or protected by <a
+                            href="https://www.sipc.org" target="_blank" rel="noopener noreferrer nofollow">SIPC</a>.
+                        Your cryptocurrency assets are held in your Bakkt Crypto account. Bakkt is a licensed virtual
+                        currency business by the New York State Department of Financial Services and a licensed money
+                        transmitter, but is not a registered broker-dealer or a <a href="https://www.finra.org"
+                            target="_blank" rel="noopener noreferrer nofollow">FINRA</a> member. Your Bakkt Crypto
+                        account is separate from your brokerage account with Public Investing, which holds US-listed
+                        stocks and ETFs. Please review the <a
+                            href="https://public.com/disclosures/bakkt-crypto-risk-disclosure" target="_blank"
+                            rel="noopener noreferrer nofollow">Risk Disclosures</a> before trading.</p>
+                    <p>
+                        <b>JIKO SECURITIES, INC.</b></p>
+                    <p><b>Jiko Accounts</b><br />
+                        Jiko Securities, Inc. (“JSI”), a registered broker-dealer and member of <a
+                            href="https://www.finra.org" target="_blank" rel="noopener noreferrer nofollow">FINRA</a> &
+                        <a href="https://www.sipc.org" target="_blank" rel="noopener noreferrer nofollow">SIPC</a>,
+                        provides accounts (“Jiko Accounts”) offering 6-month US Treasury Bills (“T-bills”). See JSI’s <a
+                            href="https://brokercheck.finra.org/firm/summary/287507" target="_blank"
+                            rel="noopener noreferrer nofollow">FINRA BrokerCheck</a> and <a
+                            href="https://jiko.io/docs/JikoSecuritiesFormCRS.pdf" target="_blank"
+                            rel="noopener noreferrer nofollow">Form CRS</a> for further information. For the avoidance
+                        of doubt, a Jiko Account is different and separate from the Treasury Account offered by Public
+                        Investing and advised by Public Advisors (see “Treasury Accounts” section above). </p>
+                    <p>JSI uses funds from your Jiko Account to purchase T-bills in increments of $100 “par value” (the
+                        T-bill’s value at maturity). T-bills are purchased at a discount to the par value and the
+                        T-bill’s yield represents the difference in price between the “par value” and the “discount
+                        price.” Aggregate funds in your Jiko Account in excess of the T-bill purchases will remain in
+                        your Jiko Account as cash. The value of T-bills fluctuate and investors may receive more or less
+                        than their original investments if sold prior to maturity. T-bills are subject to price change
+                        and availability - yield is subject to change. Past performance is not indicative of future
+                        performance. Investments in T-bills involve a variety of risks, including credit risk, interest
+                        rate risk, and liquidity risk. As a general rule, the price of a T-bills moves inversely to
+                        changes in interest rates. Although T-bills are considered safer than many other financial
+                        instruments, you could lose all or a part of your investment. See <a
+                            href="disclosures/treasuries_risk_disclosure.pdf">Jiko U.S. Treasuries Risk Disclosures</a>
+                        for further details.</p>
+                    <p><b style="font-size: 115%;">Investments in T-bills: Not FDIC Insured; No Bank Guarantee; May Lose
+                            Value.</b></p>
+                    <p>Banking services and bank accounts are offered by Jiko Bank, a division of Mid-Central National
+                        Bank. </p>
+                    <p>JSI and Jiko Bank are not affiliated with Public Holdings or any of its subsidiaries. None of
+                        these entities provide legal, tax, or accounting advice. You should consult your legal, tax, or
+                        financial advisors before making any financial decisions. This material is not intended as a
+                        recommendation, offer, or solicitation to purchase or sell securities, open a brokerage account,
+                        or engage in any investment strategy.</p>
+                    <p><a href="disclosures.html" rel="nofollow noopener noreferrer">View Full Disclosures</a></p>
+                </div>
+            </div>
+
+    </div>
+    </footer>
+
+    <!-- Twitter universal website tag code -->
+    <script type="text/javascript">
+        ! function (e, t, n, s, u, a) {
+            e.twq || (s = e.twq = function () {
+                    s.exe ? s.exe.apply(s, arguments) : s.queue.push(arguments);
+                }, s.version = '1.1', s.queue = [], u = t.createElement(n), u.async = !0, u.src =
+                '//static.ads-twitter.com/uwt.js',
+                a = t.getElementsByTagName(n)[0], a.parentNode.insertBefore(u, a))
+        }(window, document, 'script');
+        // Insert Twitter Pixel ID and Standard Event data below
+        twq('init', 'o2cbz');
+        twq('track', 'PageView');
+    </script>
+    <!-- End Twitter universal website tag code -->
+
+    <!-- Begin TVSquared Tracking Code -->
+    <script type="text/javascript">
+        var _tvq = window._tvq = window._tvq || [];
+        (function () {
+            var u = (("https:" == document.location.protocol) ? "https://collector-11893.tvsquared.com/" :
+                "http://collector-11893.tvsquared.com/");
+            _tvq.push(['setSiteId', "TV-8181180963-1"]);
+            _tvq.push(['setTrackerUrl', u + 'tv2track.php']);
+            _tvq.push([function () {
+                this.deleteCustomVariable(5, 'page')
+            }]);
+            _tvq.push(['trackPageView']);
+            var d = document,
+                g = d.createElement('script'),
+                s = d.getElementsByTagName('script')[0];
+            g.type = 'text/javascript';
+            g.defer = true;
+            g.async = true;
+            g.src = u + 'tv2track.js';
+            s.parentNode.insertBefore(g, s);
+        })();
+    </script>
+    <!-- End TVSquared Tracking Code -->
+
+    <script>
+        //Bing Click ID Info: https://help.ads.microsoft.com/apex/index/3/en/60000 (MSCLKID)
+        //Google Click ID Info: https://support.google.com/google-ads/answer/9744275?hl=en (GCLID)
+        //Yahoo CLick ID Info: https://developer.yahooinc.com/native/guide/enhanced-attribution/enable-yahoo-click-id-3p-redirects/ (vmcid)
+        //What is Organic Search in Google Analytics: https://www.webfx.com/blog/seo/what-is-organic-search-in-google-analytics/
+
+        // This code checks if the referrer matches any of the common search engines and if the 
+        // url does not contain any utm_ parameters, Singular wpsrc parameters, or common paid search clickID parameters. 
+        // If All conditions are true, the isOrganic variable is set to true, indicating that the current visit is from an 
+        // organic search. The result is then output to the console for testing and debugging purposes. A Session Storage 
+        // attribute is set, and the Singular wpsrc parameter is updated on the document.url. 
+        // For Singular's WebSDK to capture the Organic Search, this script must be initiated prior to the WebSDK Initialization.
+
+        // Check if the current visit is from a paid search
+        // Add any additional clickID parameters to the regex if needed
+        function isPaidSearch(url) {
+            return url.match(/(\?|&)(gclid|mscklid|vmcid)=/i);
+        }
+
+        // Check if the referral source is a search engine
+        // Add any additional search domains to the regex if needed
+        function isSearchEngine(referrer) {
+            return referrer.match(/google|bing|yahoo|duckduckgo|ask/i);
+        }
+
+        // Check if the current visit is from an organic search
+        function isOrganicSearch(referrer, url) {
+            return isSearchEngine(referrer) && !url.match(/utm_/i) && !url.match(/wpsrc/i);
+        }
+
+        // Get the referral source and current URL
+        var referrer = document.referrer;
+        var url = document.URL;
+
+        // Check if the current visit is from an organic search or paid search
+        var isOrganic = isOrganicSearch(referrer, url);
+        var isPaid = isPaidSearch(url);
+
+        // Output the result to the console
+        //console.log('Is organic search?', isOrganic);
+        //console.log('Is paid search?', isPaid);
+
+        // Log the referrer if the current visit is from an organic search
+        if (isOrganic && !isPaid) {
+            //console.log('Organic search referrer:', referrer);
+            sessionStorage.setItem('organicReferrer', referrer);
+            updateURL();
+        }
+
+        // Update document.url for Singular WebSDK
+        function updateURL() {
+            // Append the following parameters to the document.url
+            // wpsrc = Organic Search
+            // wpsn = referrer
+            var state = {
+                'mapper_id': 1
+            };
+            var s_current_url = new URL(document.URL);
+            var s_urlParams = new URLSearchParams(s_current_url.search);
+            var referrerHost = new URL(document.referrer).host;
+
+            s_urlParams.append('wpsrc', 'Organic Search');
+            s_urlParams.append('wpsn', referrerHost);
+            //console.log(s_urlParams.toString());
+            sessionStorage.setItem('SingularOrganicSearchQuery', s_urlParams.toString());
+            window.history.replaceState(state, document.title, s_current_url.origin + s_current_url.pathname + '?' +
+                s_urlParams.toString());
+        }
+    </script>
+    <script type="speculationrules">
+        {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/public\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+    <script type="text/javascript" id="wpil-frontend-script-js-extra">
+        /* <![CDATA[ */
+        var wpilFrontend = {
+            "ajaxUrl": "\/wp-admin\/admin-ajax.php",
+            "postId": "17662",
+            "postType": "post",
+            "openInternalInNewTab": "0",
+            "openExternalInNewTab": "0",
+            "disableClicks": "0",
+            "openLinksWithJS": "0",
+            "trackAllElementClicks": "0",
+            "clicksI18n": {
+                "imageNoText": "Image in link: No Text",
+                "imageText": "Image Title: ",
+                "noText": "No Anchor Text Found"
+            }
+        };
+        /* ]]> */
+    </script>
+    <script data-categories="essential" type="text/javascript"
+        src="wp-content/plugins/link-whisper-premium/js/frontend.min%EF%B9%96ver=1719333183.js"
+        id="wpil-frontend-script-js"></script>
+    <script type="text/javascript" id="cs/js-js-extra">
+        /* <![CDATA[ */
+        var cs = {
+            "page_id": "17662",
+            "nonce": "840e354ae8",
+            "root": "\/wp-content\/themes\/public",
+            "ajax_url": "https:\/\/public.com\/wp-admin\/admin-ajax.php",
+            "assets": "\/wp-content\/themes\/public\/dist",
+            "env": "production",
+            "app_adjust": [{
+                "referrer": "https:\/\/www.google.com\/",
+                "link": "https:\/\/app.adjust.com\/hxp5nl6"
+            }, {
+                "referrer": "https:\/\/search.yahoo.com\/",
+                "link": "https:\/\/app.adjust.com\/hxp5nl6"
+            }, {
+                "referrer": "https:\/\/duckduckgo.com\/",
+                "link": "https:\/\/app.adjust.com\/hxp5nl6"
+            }, {
+                "referrer": "https:\/\/www.baidu.com\/",
+                "link": "https:\/\/app.adjust.com\/hxp5nl6"
+            }, {
+                "referrer": "https:\/\/www.ecosia.org\/",
+                "link": "https:\/\/app.adjust.com\/hxp5nl6"
+            }, {
+                "referrer": "https:\/\/www.money.com\/",
+                "link": "https:\/\/www.pqr3ntrk.com\/4RQSJ\/293Z4R"
+            }, {
+                "referrer": "https:\/\/www.bing.com\/",
+                "link": "https:\/\/app.adjust.com\/hxp5nl6"
+            }, {
+                "referrer": "https:\/\/decrypt.co\/",
+                "link": "https:\/\/app.adjust.com\/u9erlzu"
+            }, {
+                "referrer": "https:\/\/financebuzz.com\/",
+                "link": "https:\/\/app.adjust.com\/7q9b4ps"
+            }, {
+                "referrer": "https:\/\/www.bankrate.com\/",
+                "link": "https:\/\/public.qwjcdi.net\/c\/353874\/698556\/10608"
+            }]
+        };
+        /* ]]> */
+    </script>
+    <script data-categories="essential" type="text/javascript"
+        src="wp-content/themes/public/dist/scripts/homepage-607b0fac.js" id="cs/js-js"></script>
+    <script data-categories="essential" type="text/javascript"
+        src="wp-includes/js/dist/dom-ready.min%EF%B9%96ver=f77871ff7694fffea381.js" id="wp-dom-ready-js"></script>
+    <script data-categories="essential" type="text/javascript"
+        src="wp-includes/js/dist/hooks.min%EF%B9%96ver=4d63a3d491d11ffd8ac6.js" id="wp-hooks-js"></script>
+    <script data-categories="essential" type="text/javascript"
+        src="wp-includes/js/dist/i18n.min%EF%B9%96ver=5e580eb46a90c2b997e6.js" id="wp-i18n-js"></script>
+    <script data-categories="essential" type="text/javascript" id="wp-i18n-js-after">
+        /* <![CDATA[ */
+        wp.i18n.setLocaleData({
+            'text direction\u0004ltr': ['ltr']
+        });
+        /* ]]> */
+    </script>
+    <script data-categories="essential" type="text/javascript"
+        src="wp-includes/js/dist/a11y.min%EF%B9%96ver=3156534cc54473497e14.js" id="wp-a11y-js"></script>
+    <script data-categories="essential" type="text/javascript" defer
+        src="wp-includes/js/jquery/jquery.min%EF%B9%96ver=3.7.1.js" id="jquery-core-js"></script>
+    <script data-categories="essential" type="text/javascript" defer
+        src="wp-includes/js/jquery/jquery-migrate.min%EF%B9%96ver=3.4.1.js" id="jquery-migrate-js"></script>
+    <script data-categories="essential" type="text/javascript" defer='defer' defer
+        src="wp-content/plugins/gravityforms/js/jquery.json.min%EF%B9%96ver=2.9.2.3.js" id="gform_json-js"></script>
+    <script type="text/javascript" id="gform_gravityforms-js-extra">
+        /* <![CDATA[ */
+        var gform_i18n = {
+            "datepicker": {
+                "days": {
+                    "monday": "Mo",
+                    "tuesday": "Tu",
+                    "wednesday": "We",
+                    "thursday": "Th",
+                    "friday": "Fr",
+                    "saturday": "Sa",
+                    "sunday": "Su"
+                },
+                "months": {
+                    "january": "January",
+                    "february": "February",
+                    "march": "March",
+                    "april": "April",
+                    "may": "May",
+                    "june": "June",
+                    "july": "July",
+                    "august": "August",
+                    "september": "September",
+                    "october": "October",
+                    "november": "November",
+                    "december": "December"
+                },
+                "firstDay": 1,
+                "iconText": "Select date"
+            }
+        };
+        var gf_legacy_multi = [];
+        var gform_gravityforms = {
+            "strings": {
+                "invalid_file_extension": "This type of file is not allowed. Must be one of the following:",
+                "delete_file": "Delete this file",
+                "in_progress": "in progress",
+                "file_exceeds_limit": "File exceeds size limit",
+                "illegal_extension": "This type of file is not allowed.",
+                "max_reached": "Maximum number of files reached",
+                "unknown_error": "There was a problem while saving the file on the server",
+                "currently_uploading": "Please wait for the uploading to complete",
+                "cancel": "Cancel",
+                "cancel_upload": "Cancel this upload",
+                "cancelled": "Cancelled"
+            },
+            "vars": {
+                "images_url": "https:\/\/hellopublic.wpengine.com\/wp-content\/plugins\/gravityforms\/images"
+            }
+        };
+        var gf_global = {
+            "gf_currency_config": {
+                "name": "U.S. Dollar",
+                "symbol_left": "$",
+                "symbol_right": "",
+                "symbol_padding": "",
+                "thousand_separator": ",",
+                "decimal_separator": ".",
+                "decimals": 2,
+                "code": "USD"
+            },
+            "base_url": "https:\/\/hellopublic.wpengine.com\/wp-content\/plugins\/gravityforms",
+            "number_formats": [],
+            "spinnerUrl": "https:\/\/hellopublic.wpengine.com\/wp-content\/plugins\/gravityforms\/images\/spinner.svg",
+            "version_hash": "c004b208840e75fc81e2a75fdf51fa01",
+            "strings": {
+                "newRowAdded": "New row added.",
+                "rowRemoved": "Row removed",
+                "formSaved": "The form has been saved.  The content contains the link to return and complete the form."
+            }
+        };
+        /* ]]> */
+    </script>
+    <script data-categories="essential" type="text/javascript" defer='defer' defer
+        src="wp-content/plugins/gravityforms/js/gravityforms.min%EF%B9%96ver=2.9.2.3.js" id="gform_gravityforms-js">
+    </script>
+    <script data-categories="essential" type="text/javascript" defer='defer' defer
+        src="wp-content/plugins/gravityforms/js/placeholders.jquery.min%EF%B9%96ver=2.9.2.3.js"
+        id="gform_placeholder-js"></script>
+    <script data-categories="essential" type="text/javascript" defer='defer'
+        src="wp-content/plugins/gravityforms/assets/js/dist/utils.min%EF%B9%96ver=501a987060f4426fb517400c73c7fc1e.js"
+        id="gform_gravityforms_utils-js"></script>
+    <script data-categories="essential" type="text/javascript" defer='defer'
+        src="wp-content/plugins/gravityforms/assets/js/dist/vendor-theme.min%EF%B9%96ver=ddd2702ee024d421149a5e61416f1ff5.js"
+        id="gform_gravityforms_theme_vendors-js"></script>
+    <script type="text/javascript" id="gform_gravityforms_theme-js-extra">
+        /* <![CDATA[ */
+        var gform_theme_config = {
+            "common": {
+                "form": {
+                    "honeypot": {
+                        "version_hash": "c004b208840e75fc81e2a75fdf51fa01"
+                    },
+                    "ajax": {
+                        "ajaxurl": "https:\/\/hellopublic.wpengine.com\/wp-admin\/admin-ajax.php",
+                        "ajax_submission_nonce": "ff2efec5c2",
+                        "i18n": {
+                            "step_announcement": "Step %1$s of %2$s, %3$s",
+                            "unknown_error": "There was an unknown error processing your request. Please try again."
+                        }
+                    }
+                }
+            },
+            "hmr_dev": "",
+            "public_path": "https:\/\/hellopublic.wpengine.com\/wp-content\/plugins\/gravityforms\/assets\/js\/dist\/",
+            "config_nonce": "afec901091"
+        };
+        /* ]]> */
+    </script>
+    <script data-categories="essential" type="text/javascript" defer='defer'
+        src="wp-content/plugins/gravityforms/assets/js/dist/scripts-theme.min%EF%B9%96ver=44165c9e8667417e940567b81e1bf2b8.js"
+        id="gform_gravityforms_theme-js"></script>
+    <script data-cfasync="false">
+        document.onreadystatechange = function () {
+            if (document.readyState == "complete") {
+                var logout_link = document.querySelectorAll('a[href*="wp-login.php?action=logout"]');
+                if (logout_link) {
+                    for (var i = 0; i < logout_link.length; i++) {
+                        logout_link[i].addEventListener("click", function () {
+                            Intercom('shutdown');
+                        });
+                    }
+                }
+            }
+        };
+    </script>
+    <script data-cfasync="false">
+        window.intercomSettings = {
+            "app_id": "m86fqkzc",
+            "installation_type": "wordpress",
+            "installation_version": "3.0.2"
+        };
+    </script>
+    <script data-cfasync="false">
+        (function () {
+            var w = window;
+            var ic = w.Intercom;
+            if (typeof ic === "function") {
+                ic('reattach_activator');
+                ic('update', w.intercomSettings);
+            } else {
+                var d = document;
+                var i = function () {
+                    i.c(arguments);
+                };
+                i.q = [];
+                i.c = function (args) {
+                    i.q.push(args);
+                };
+                w.Intercom = i;
+                var l = function () {
+                    var s = d.createElement('script');
+                    s.type = 'text/javascript';
+                    s.async = true;
+                    s.src = 'https://widget.intercom.io/widget/m86fqkzc';
+                    var x = d.getElementsByTagName('script')[0];
+                    x.parentNode.insertBefore(s, x);
+                };
+                if (document.readyState === 'complete') {
+                    l();
+                } else if (w.attachEvent) {
+                    w.attachEvent('onload', l);
+                } else {
+                    w.addEventListener('load', l, false);
+                }
+            }
+        })()
+    </script>
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        gform.initializeOnLoaded(function () {
+            jQuery(document).on('gform_post_render', function (event, formId, currentPage) {
+                if (formId == 14) {
+                    if (typeof Placeholders != 'undefined') {
+                        Placeholders.enable();
+                    }
+                }
+            });
+            jQuery(document).on('gform_post_conditional_logic', function (event, formId, fields, isInit) {})
+        });
+        /* ]]> */
+    </script>
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        gform.initializeOnLoaded(function () {
+            jQuery(document).trigger("gform_pre_post_render", [{
+                formId: "14",
+                currentPage: "1",
+                abort: function () {
+                    this.preventDefault();
+                }
+            }]);
+            if (event && event.defaultPrevented) {
+                return;
+            }
+            const gformWrapperDiv = document.getElementById("gform_wrapper_14");
+            if (gformWrapperDiv) {
+                const visibilitySpan = document.createElement("span");
+                visibilitySpan.id = "gform_visibility_test_14";
+                gformWrapperDiv.insertAdjacentElement("afterend", visibilitySpan);
+            }
+            const visibilityTestDiv = document.getElementById("gform_visibility_test_14");
+            let postRenderFired = false;
+
+            function triggerPostRender() {
+                if (postRenderFired) {
+                    return;
+                }
+                postRenderFired = true;
+                jQuery(document).trigger('gform_post_render', [14, 1]);
+                gform.utils.trigger({
+                    event: 'gform/postRender',
+                    native: false,
+                    data: {
+                        formId: 14,
+                        currentPage: 1
+                    }
+                });
+                gform.utils.trigger({
+                    event: 'gform/post_render',
+                    native: false,
+                    data: {
+                        formId: 14,
+                        currentPage: 1
+                    }
+                });
+                if (visibilityTestDiv) {
+                    visibilityTestDiv.parentNode.removeChild(visibilityTestDiv);
+                }
+            }
+
+            function debounce(func, wait, immediate) {
+                var timeout;
+                return function () {
+                    var context = this,
+                        args = arguments;
+                    var later = function () {
+                        timeout = null;
+                        if (!immediate) func.apply(context, args);
+                    };
+                    var callNow = immediate && !timeout;
+                    clearTimeout(timeout);
+                    timeout = setTimeout(later, wait);
+                    if (callNow) func.apply(context, args);
+                };
+            }
+            const debouncedTriggerPostRender = debounce(function () {
+                triggerPostRender();
+            }, 200);
+            if (visibilityTestDiv && visibilityTestDiv.offsetParent === null) {
+                const observer = new MutationObserver((mutations) => {
+                    mutations.forEach((mutation) => {
+                        if (mutation.type === 'attributes' && visibilityTestDiv.offsetParent !==
+                            null) {
+                            debouncedTriggerPostRender();
+                            observer.disconnect();
+                        }
+                    });
+                });
+                observer.observe(document.body, {
+                    attributes: true,
+                    childList: false,
+                    subtree: true,
+                    attributeFilter: ['style', 'class'],
+                });
+            } else {
+                triggerPostRender();
+            }
+        });
+        /* ]]> */
+    </script>
+
+    <div id="hp-cookie-consent" class="component component-cookie-consent">
+        <div class="container">
+            <p>We use cookies and similar technologies as described in our <a href="privacy-policy.html">privacy
+                    policy</a>. You can manage your cookie settings at any time.</p>
+
+            <a href="#hp-cookie-consent" data-hide="hp-cookie-consent" data-toggle="class"
+                data-target="hp-cookie-consent" data-remember="dismissed" data-value="dismissed"
+                data-cookie="__public_cookie_banner" class="btn-blue-gradient">
+                Got it!
+            </a>
+
+            <a href="#hp-cookie-consent" data-hide="hp-cookie-consent" data-toggle="class"
+                data-target="hp-cookie-consent" aria-label="Close Consent Notice" class="close-hp-cookie-consent">
+                <span>&times;</span>
+            </a>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
