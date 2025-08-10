@@ -3,86 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <script type="text/javascript">
-        /* <![CDATA[ */
-        var gform;
-        gform || (document.addEventListener("gform_main_scripts_loaded", function () {
-            gform.scriptsLoaded = !0
-        }), document.addEventListener("gform/theme/scripts_loaded", function () {
-            gform.themeScriptsLoaded = !0
-        }), window.addEventListener("DOMContentLoaded", function () {
-            gform.domLoaded = !0
-        }), gform = {
-            domLoaded: !1,
-            scriptsLoaded: !1,
-            themeScriptsLoaded: !1,
-            isFormEditor: () => "function" == typeof InitializeEditor,
-            callIfLoaded: function (o) {
-                return !(!gform.domLoaded || !gform.scriptsLoaded || !gform.themeScriptsLoaded && !gform
-                    .isFormEditor() || (gform.isFormEditor() && console.warn(
-                        "The use of gform.initializeOnLoaded() is deprecated in the form editor context and will be removed in Gravity Forms 3.1."
-                        ), o(), 0))
-            },
-            initializeOnLoaded: function (o) {
-                gform.callIfLoaded(o) || (document.addEventListener("gform_main_scripts_loaded", () => {
-                    gform.scriptsLoaded = !0, gform.callIfLoaded(o)
-                }), document.addEventListener("gform/theme/scripts_loaded", () => {
-                    gform.themeScriptsLoaded = !0, gform.callIfLoaded(o)
-                }), window.addEventListener("DOMContentLoaded", () => {
-                    gform.domLoaded = !0, gform.callIfLoaded(o)
-                }))
-            },
-            hooks: {
-                action: {},
-                filter: {}
-            },
-            addAction: function (o, r, e, t) {
-                gform.addHook("action", o, r, e, t)
-            },
-            addFilter: function (o, r, e, t) {
-                gform.addHook("filter", o, r, e, t)
-            },
-            doAction: function (o) {
-                gform.doHook("action", o, arguments)
-            },
-            applyFilters: function (o) {
-                return gform.doHook("filter", o, arguments)
-            },
-            removeAction: function (o, r) {
-                gform.removeHook("action", o, r)
-            },
-            removeFilter: function (o, r, e) {
-                gform.removeHook("filter", o, r, e)
-            },
-            addHook: function (o, r, e, t, n) {
-                null == gform.hooks[o][r] && (gform.hooks[o][r] = []);
-                var d = gform.hooks[o][r];
-                null == n && (n = r + "_" + d.length), gform.hooks[o][r].push({
-                    tag: n,
-                    callable: e,
-                    priority: t = null == t ? 10 : t
-                })
-            },
-            doHook: function (r, o, e) {
-                var t;
-                if (e = Array.prototype.slice.call(e, 1), null != gform.hooks[r][o] && ((o = gform.hooks[r][
-                        o
-                    ]).sort(function (o, r) {
-                        return o.priority - r.priority
-                    }), o.forEach(function (o) {
-                        "function" != typeof (t = o.callable) && (t = window[t]), "action" == r ? t
-                            .apply(null, e) : e[0] = t.apply(null, e)
-                    })), "filter" == r) return e[0]
-            },
-            removeHook: function (o, r, t, n) {
-                var e;
-                null != gform.hooks[o][r] && (e = (e = gform.hooks[o][r]).filter(function (o, r, e) {
-                    return !!(null != n && n != o.tag || null != t && t != o.priority)
-                }), gform.hooks[o][r] = e)
-            }
-        });
-        /* ]]> */
-    </script>
+
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 
@@ -94,26 +15,21 @@
     <link rel="preconnect" href="index.html">
 
     <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
-    <style>
-        img:is([sizes="auto"i], [sizes^="auto,"i]) {
-            contain-intrinsic-size: 3000px 1500px
-        }
-    </style>
+  
 
-    <title>Stocks, Bonds, Crypto, &amp; Options Investing App - throva.com</title>
+    <title>Gold, Oil & Gas, AI, &amp; Smart Farms - Throva</title>
     <meta name="description"
         content="Invest in Stocks, Bonds, Options, Crypto, ETFs, Treasuries, and more with AI-powered fundamental data and custom analysis." />
     <link rel="canonical" href="index.html" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Stocks, Bonds, Crypto, &amp; Options Investing App - throva.com" />
+    <meta property="og:title" content="Gold, Oil & Gas, AI, &amp; Smart Farms - Throva" />
     <meta property="og:description"
-        content="Invest in Stocks, Bonds, Options, Crypto, ETFs, Treasuries, and more with AI-powered fundamental data and custom analysis." />
+        content="Invest in Gold, Oil & Gas, AI, and more with AI-powered fundamental data and custom analysis." />
     <meta property="og:url" content="https://throva.com" />
     <meta property="og:site_name" content="throva" />
     <meta property="article:publisher" content="https://www.facebook.com/throvaHello/" />
     <meta property="article:modified_time" content="2025-07-17T08:31:51+00:00" />
-    <meta property="og:image" content="https://throva.com/wp-content/uploads/2023/10/OG-Image-Homepage.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:type" content="image/png" />
@@ -123,43 +39,7 @@
     <meta name="google-site-verification" content="sSeFHLieQ9k0kB7R5EqzQ7hrHuygGrmpQag7vtWAOrE" />
 
 
-    <link rel='dns-prefetch' href='https://universal.hellothrova.com' />
-    <!-- Google Tag Manager -->
-    <script type="text/javascript">
-        (function (w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-PCBFC3K');
-    </script>
-    <!-- End Google Tag Manager -->
-    <style id='classic-theme-styles-inline-css' type='text/css'>
-        /*! This file is auto-generated */
-        .wp-block-button__link {
-            color: #fff;
-            background-color: #32373c;
-            border-radius: 9999px;
-            box-shadow: none;
-            text-decoration: none;
-            padding: calc(.667em + 2px) calc(1.333em + 2px);
-            font-size: 1.125em
-        }
-
-        .wp-block-file__button {
-            background: #32373c;
-            color: #fff;
-            text-decoration: none
-        }
-    </style>
+   
     <link rel='stylesheet' id='Stock Charts by throva.com/css-css' defer
         href='wp-content/plugins/stock-charts-by-throva-com/dist/styles/main-b015f46f%EF%B9%96ver=1.0.1.css'
         type='text/css' media='all' />
@@ -240,7 +120,7 @@
     <script type="text/javascript">
         document.documentElement.className += " js";
     </script>
-    <link rel="shortcut icon" href="wp-content/uploads/2022/02/logo.ico"
+    <link rel="shortcut icon" href="logo_throva.png"
         data-dark="/wp-content/uploads/2022/02/throva-favicon-white.png" type="image/x-icon" />
     <script data-categories="advertising" src="https://web-sdk-cdn.singular.net/singular-sdk/latest/singular-sdk.js">
     </script>
