@@ -1,0 +1,38 @@
+#truth {
+    width: 50%;
+}
+
+#marucs{
+   width: 50% !important;
+}
+
+.section-highlights .span-highlights .span-container{
+    max-width: 45% !important;
+}
+
+.section-highlights .span-highlights .span-content{
+    padding-bottom: 0px !important;
+}
+
+.section-alpha{
+    padding-top: 0px !important;
+}
+
+.section-highlights .span-highlights .highlight{
+    justify-content: space-around !important;
+}
+
+
+@media screen and (max-width: 480px) {
+ #truth {
+    width: 100%;
+}
+
+#marucs{
+    width: 100%;
+}
+
+.section-highlights .span-highlights .span-container{
+    max-width: 100% !important;
+}
+}
