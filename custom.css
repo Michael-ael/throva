@@ -23,6 +23,22 @@
 }
 
 
+
+
+@media (min-width: 720px) {
+
+    .about_highlights .container{
+    justify-content: space-around !important;
+}
+
+    .about_highlights .span-title {
+        -webkit-box-ordinal-group: 31;
+        order: 30;
+        width: 50%;
+        max-width: 500px !important;
+    }
+}
+
 @media screen and (max-width: 480px) {
  #truth {
     width: 100%;
