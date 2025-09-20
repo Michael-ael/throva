@@ -84,6 +84,12 @@
     justify-content: space-around !important;
 }
 
+#team{
+    width: 100%;
+    margin-left: 8%;
+    margin-top: 5%;
+}
+
 
 
 
@@ -112,5 +118,12 @@
 
 .section-highlights .span-highlights .span-container{
     max-width: 100% !important;
+}
+
+#team{
+    width: 100%;
+    margin-left: 0%;
+    margin-top: 1%;
+    margin-bottom: -3%;
 }
 }
