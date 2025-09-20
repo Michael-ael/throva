@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonials Slider</title>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8f9fb;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      color: #222;
+    }
+
+    .swiper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-bottom: 3rem;
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+    }
+
+    .testimonial-card {
+      background: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      padding: 1.5rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      max-width: 500px;
+      margin: 0.5rem;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+    }
+
+    .stars {
+      color: #f5c518;
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .quote {
+      font-style: italic;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    .author {
+      font-weight: bold;
+      color: #111;
+    }
+
+    .role {
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>What Our Investors Say</h1>
+
+  <!-- Slider -->
+  <div class="swiper">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide">
+        <div class="testimonial-card">
+          <div class="stars">⭐️⭐️⭐️⭐️⭐️</div>
+          <p class="quote">"As a family office lead, I rarely get impressed. Throva? Different."</p>
+          <p class="author">— Jonathan A., Edinburgh</p>
+          <p class="role">Family Office Portfolio Manager</p>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="testimonial-card">
+          <div class="stars">⭐️⭐️⭐️⭐️⭐️</div>
+          <p class="quote">“They speak the language most firms can’t even pronounce. Throva showed me gold mine partnerships, wine export projections, recovery deals—all with financials I could verify. Rare intelligence and humility in this space.”</p>
+          <p class="author">— Joshua N., London</p>
+          <p class="role">Wealth Consultant & Family Office Liaison</p>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="testimonial-card">
+          <div class="stars">⭐️⭐️⭐️⭐️⭐️</div>
+          <p class="quote">“What Throva is doing should’ve existed 20 years ago. Their model reduces risk, speeds up returns, and gives options. I’ve already reinvested three times. And I’m not done yet.”</p>
+          <p class="author">— Farouk A., Dubai</p>
+          <p class="role">Veteran Investor, Ex-FX Trader</p>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="testimonial-card">
+          <div class="stars">⭐️⭐️⭐️⭐️</div>
+          <p class="quote">“This is the closest I’ve ever felt to being inside wealth, not outside looking in. Throva gave me a seat at a table I didn’t know existed. It changed how I see money, time, and legacy.”</p>
+          <p class="author">— Caroline V., Edinburgh</p>
+          <p class="role">Creative Entrepreneur Turned Investor</p>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="testimonial-card">
+          <div class="stars">⭐️⭐️⭐️⭐️⭐️</div>
+          <p class="quote">“Throva made me feel like I wasn’t late. Their presence had quiet confidence backed by real results. This isn’t a trend. It’s a turning point.”</p>
+          <p class="author">— Tariq R., Dubai</p>
+          <p class="role">Finance Consultant, Private Angel Syndicate</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Navigation -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      slidesPerView: 2,
+      spaceBetween: 20,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        }
+      }
+    });
+  </script>
+</body>
+</html>

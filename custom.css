@@ -1,3 +1,65 @@
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      color: #222;
+      font-family: 'Denton test';
+    }
+
+    h2{
+        font-family: 'Denton test';
+        font-weight:lighter;
+    }
+
+    .swiper {
+      max-width: 90%;
+      margin: 0 auto;
+      padding-bottom: 3rem;
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+    }
+
+    .testimonial-card {
+      background: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      padding: 1.5rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      max-width: 500px;
+      margin: 0.5rem;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+    }
+
+    .stars {
+      color: #f5c518;
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .quote {
+      font-style: italic;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    .author {
+      font-weight: bold;
+      color: #111;
+    }
+
+    .role {
+      font-size: 0.9rem;
+      color: #666;
+    }
+  
 #truth {
     width: 50%;
 }
