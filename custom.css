@@ -1,5 +1,39 @@
 
-    h1 {
+.span-media{
+  box-shadow: 10px 15px 47px -8px rgba(0,0,0,0.51);
+-webkit-box-shadow: 10px 15px 47px -8px rgba(0,0,0,0.51);
+-moz-box-shadow: 10px 15px 47px -8px rgba(0,0,0,0.51);
+}
+#span-image{
+  box-shadow: 10px 15px 47px -8px rgba(0,0,0,0.51) !important;
+-webkit-box-shadow: 10px 15px 47px -8px rgba(0,0,0,0.51);
+-moz-box-shadow: 10px 15px 47px -8px rgba(0,0,0,0.51);
+}
+
+   #flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+   }
+
+   #side-ul{
+    width: 60%;
+   }
+
+   #ul-flex{
+    display: flex;
+    font-size: 25px;
+    flex-direction: column;
+    transform: scale(2);
+    margin-bottom: 23% !important;
+    padding-left: 37%;
+   }
+  #ul-flex li{
+    font-size: 30px;
+  }
+   
+   h1 {
       text-align: center;
       margin-bottom: 2rem;
       font-size: 2rem;
@@ -108,6 +142,11 @@
   justify-content: space-between;
 }
 
+  #side-ul{
+    width: 100%;
+    display: none;
+   }
+
 
 @media (min-width: 720px) {
 
@@ -129,6 +168,23 @@
   justify-content: space-between;
   flex-direction: column;
 }
+
+
+
+  #ul-flex{
+    display: flex;
+    font-size: 25px;
+    flex-direction: row;
+    transform: scale(1);
+
+   }
+
+   #flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+   }
 
  #truth {
     width: 100%;
